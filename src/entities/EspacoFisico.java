@@ -23,7 +23,7 @@ public class EspacoFisico extends CadastroEspacoFisico {
 	protected String capacidade;
 	protected String localizacao;
 	protected String equipamentos;
-
+ 
 	
 	public String getTipo() {
 		return null;
@@ -85,6 +85,14 @@ public class EspacoFisico extends CadastroEspacoFisico {
 	}
 
 	}
+<<<<<<< HEAD
 
 	
+<<<<<<< HEAD
 
+=======
+	
+
+=======
+>>>>>>> refs/remotes/origin/main
+>>>>>>> 620a2f2a950c79be56746febcb425f2724a90b1c

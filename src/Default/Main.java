@@ -33,7 +33,7 @@ public class Main {
 					MenuServidor2.frontServidor(cadServidor);
 				break;
 				case 4: 
-					JOptionPane.showMessageDialog(null, "Cadastro de turmas a ser implementado");
+					JOptionPane.showMessageDialog(null, "Opcao invalida");
 				break;
 				case 0: 
 				break;
