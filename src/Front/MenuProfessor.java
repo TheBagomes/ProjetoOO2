@@ -2,35 +2,35 @@ package Front;
 
 import javax.swing.JOptionPane;
 
-import Cadastros.CadastroProfessor;
+import Cadastros.CadastroPessoaFisica.CadastroProfessor;
 import entities.Professor;
 
 public class MenuProfessor {
     private static String lerNome() {
-		return JOptionPane.showInputDialog("Informe o nome do professor: ");
+		return JOptionPane.showInputDialog("Informe o nome do(a) professor(a): ");
 	}
 
     private static String lerCurso(){
-        return JOptionPane.showInputDialog("Informe o curso do professor: ");
+        return JOptionPane.showInputDialog("Informe o curso do(a) professor(a): ");
     }
     private static String lerEmail() {
-		return JOptionPane.showInputDialog("Informe o email do professor: ");
+		return JOptionPane.showInputDialog("Informe o email do(a) professor(a): ");
 	}
 
 	private static String lerTelefone() {
-		return JOptionPane.showInputDialog("Informe o telefone de contato do professor: ");
+		return JOptionPane.showInputDialog("Informe o telefone de contato do(a) professor(a): ");
 	}
 
 	private static String LerMatriculaProf() {
-		return JOptionPane.showInputDialog("Informe a matricula do professor: ");
+		return JOptionPane.showInputDialog("Informe a matricula do(a) professor(a): ");
 	}
 
     private static String lerSenha(){
-        return JOptionPane.showInputDialog("Digite a senha do professor: ");
+        return JOptionPane.showInputDialog("Digite a senha do(a) professor(a): ");
     }
     
     private static String lerCargoAcademico(){
-        return JOptionPane.showInputDialog("Informe o cargo academico do professor: ");
+        return JOptionPane.showInputDialog("Informe o cargo academico do(a) professor(a): ");
     }
 
 
@@ -44,7 +44,7 @@ public class MenuProfessor {
         String cargoAcademico = lerCargoAcademico();
         return new Professor(nome, email, telefone, senha, matriculaProf, curso, cargoAcademico); 
     }
-
+    
     public static void frontProfessor(CadastroProfessor cadProfessor){
         String texto = "=== Menu de Professor === \n"
                     + "1 - Fazer cadastro\n"

@@ -1,14 +1,14 @@
 package entities;
 
-import Cadastros.CadastroEspacoFisico;
+import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
 
 public class EspacoFisico extends CadastroEspacoFisico {
 	
-	String sala;
-	String tipo;
-	String capacidade;
-	String localizacao;
-	String equipamentos;
+	protected String sala;
+	protected String tipo;
+	protected String capacidade;
+	protected String localizacao;
+	protected String equipamentos;
 	
 	public String getTipo() {
 		return null;
@@ -67,6 +67,11 @@ public class EspacoFisico extends CadastroEspacoFisico {
 		resposta += "TIPO: " + tipo + '\n';
 	
 		return resposta;
+	}
+
+	public String getatriculaServ() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'getatriculaServ'");
 	}
 
 	/*  Q isso?

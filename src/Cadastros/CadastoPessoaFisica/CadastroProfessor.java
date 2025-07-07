@@ -1,4 +1,4 @@
-package Cadastros;
+package Cadastros.CadastoPessoaFisica;
 
 import entities.Professor;
 //import entities.PessoaFisica;
