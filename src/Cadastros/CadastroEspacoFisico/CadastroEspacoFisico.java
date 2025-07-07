@@ -36,7 +36,7 @@ public class CadastroEspacoFisico {
 	        }
 	        return null;
 	    }
-		MAs todo menu precisa do Cadastro certo  ?
+		
 	    /*public boolean removerEspacoFisico(String sala, EspacoFisico ok){
 	        boolean removeu = false;
 	        if (EspacoFisico.contains(ok)){
