@@ -6,7 +6,7 @@ public class EspacoFisico extends CadastroEspacoFisico {
 	
 	String sala;
 	String tipo;
-	String capacidade;
+	int capacidade;
 	String localizacao;
 	String equipamentos;
 	
