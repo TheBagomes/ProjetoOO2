@@ -1,8 +1,8 @@
 package Cadastros;
 
 import entities.EspacoFisico;
-import java.util.List;
 
+import java.util.List;
 
 public class Auditorio extends EspacoFisico {
 

@@ -1,6 +1,7 @@
 package Cadastros.CadastroEspacoFisico;
 
 import entities.Laboratorio;
+
 import java.util.ArrayList;
 import java.util.List;
 

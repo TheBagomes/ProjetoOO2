@@ -4,19 +4,18 @@ import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
 
 public class EspacoFisico extends CadastroEspacoFisico {
 	
-<<<<<<< HEAD
 	String sala;
 	String tipo;
 	int capacidade;
 	String localizacao;
 	String equipamentos;
-=======
+
 	protected String sala;
 	protected String tipo;
 	protected String capacidade;
 	protected String localizacao;
 	protected String equipamentos;
->>>>>>> f746eb0431a74410691fb3d43930ece52213dcc2
+
 	
 	public String getTipo() {
 		return null;
@@ -82,13 +81,5 @@ public class EspacoFisico extends CadastroEspacoFisico {
 		throw new UnsupportedOperationException("Unimplemented method 'getatriculaServ'");
 	}
 
-	/*  Q isso?
-	 * 
-	@Override
-    public String toString() {
-        return String.format("[%s] %s - Capacidade: %d, Local: %s",
-                             getTipo(), tipo, capacidade, localizacao);
-    }
-    */
 	
 }

@@ -1,6 +1,7 @@
 package Cadastros;
 
 import entities.EspacoFisico;
+
 import java.util.List;
 
 public class Laboratorio extends EspacoFisico {
