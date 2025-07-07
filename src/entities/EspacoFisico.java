@@ -47,7 +47,7 @@ public abstract class EspacoFisico {  // Classe abstrata (não pode ser instanci
                "LOCALIZAÇÃO: " + localizacao;
     }
 }
-=======
+
 public class EspacoFisico extends CadastroEspacoFisico {
 	
 
