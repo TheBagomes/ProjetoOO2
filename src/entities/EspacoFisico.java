@@ -69,9 +69,6 @@ public class EspacoFisico extends CadastroEspacoFisico {
 		return resposta;
 	}
 
-	public String getatriculaServ() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'getatriculaServ'");
 	}
 
 	/*  Q isso?

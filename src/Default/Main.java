@@ -2,22 +2,19 @@ package Default;
 
 import javax.swing.JOptionPane;
 import Front.MenuServidor2;
-import Cadastros.CadastroPessoaFisica.CadastroAluno;
-import Cadastros.CadastroPessoaFisica.CadastroProfessor;
-import Cadastros.CadastroPessoaFisica.CadastroServidores;
 import Front.MenuAluno;
 import Front.MenuPadrao;
 import Front.MenuProfessor;
 
 public class Main {
-    static CadastroAluno cadAluno;
-    static CadastroProfessor cadProfessor;
-    static CadastroServidores cadServidor;
+    static Cadastros.CadastoPessoaFisica.CadastroAluno cadAluno;
+    static Cadastros.CadastoPessoaFisica.CadastroProfessor cadProfessor;
+    static Cadastros.CadastoPessoaFisica.CadastroServidores cadServidor;
 	
 	public static void main(String[] args) {
-		cadAluno = new CadastroAluno();
-		cadProfessor = new CadastroProfessor();
-		cadServidor = new CadastroServidores();
+		cadAluno = new Cadastros.CadastoPessoaFisica.CadastroAluno();
+		cadProfessor = new Cadastros.CadastoPessoaFisica.CadastroProfessor();
+		cadServidor = new Cadastros.CadastoPessoaFisica.CadastroServidores();
 		
 		int escolha = 0; 
 		

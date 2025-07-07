@@ -2,7 +2,6 @@ package Front;
 
 import javax.swing.JOptionPane;
 
-import Cadastros.CadastroPessoaFisica.CadastroServidores;
 import entities.Servidor;
 
 public class MenuServidor2{
@@ -49,7 +48,7 @@ public class MenuServidor2{
         return new Servidor(nome, email, matricula, telefone, senha, cargo, departamento, funcao); 
     }
     
-    public static void frontServidor(CadastroServidores cadServidor){
+    public static void frontServidor(Cadastros.CadastoPessoaFisica.CadastroServidores cadServidor){
         String texto = "=== Menu de Servidor === \n"
                     + "1 - Fazer cadastro\n"
                     + "2 - Pesquisar Servidor\n"

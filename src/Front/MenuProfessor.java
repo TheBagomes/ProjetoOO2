@@ -2,7 +2,6 @@ package Front;
 
 import javax.swing.JOptionPane;
 
-import Cadastros.CadastroPessoaFisica.CadastroProfessor;
 import entities.Professor;
 
 public class MenuProfessor {
@@ -45,7 +44,7 @@ public class MenuProfessor {
         return new Professor(nome, email, telefone, senha, matriculaProf, curso, cargoAcademico); 
     }
     
-    public static void frontProfessor(CadastroProfessor cadProfessor){
+    public static void frontProfessor(Cadastros.CadastoPessoaFisica.CadastroProfessor cadProfessor){
         String texto = "=== Menu de Professor === \n"
                     + "1 - Fazer cadastro\n"
                     + "2 - Pesquisar professor\n"
