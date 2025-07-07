@@ -16,6 +16,7 @@ public class CadastroEspacoFisico {
 	    public CadastroEspacoFisico(String sala, String tipo, String capacidade, String localizacao, String equipamentos){
 	        nEspacoFisico = 0;
 	        EspacoFisico = new ArrayList<EspacoFisico>();
+			Equipamentos = new ArrayList<equipamentos>(equipamentos);
 	    }
 
 	    public int cadastroEspacoFisico(EspacoFisico ok){
@@ -26,6 +27,7 @@ public class CadastroEspacoFisico {
 	        return nEspacoFisico;
 	    }
 
+<<<<<<< HEAD
 		public int cadastroDeEquipamentos(equipamento)
 
 	    public EspacoFisico pesquisarEspacoFisico(String matriculaEspacoFisico){
@@ -47,5 +49,7 @@ public class CadastroEspacoFisico {
             // TODO Auto-generated method stub
             throw new UnsupportedOperationException("Unimplemented method 'removerEspacoFisico'");
         }  
+=======
+>>>>>>> refs/remotes/origin/main
 
 }
