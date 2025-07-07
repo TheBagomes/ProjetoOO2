@@ -1,53 +1,30 @@
 package Cadastros.CadastroEspacoFisico;
 
-import entities.SalaDeAula;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CadastroSalaDeAula {
+import entities.SalaDeAula;
 
-    private int nSalas;
+public class CadastroSalaDeAula {
     private List<SalaDeAula> salas;
+    private List<Equipamentos> equipamentos; // Lista compartilhada (ou pode ser por sala)
 
     public CadastroSalaDeAula() {
-        nSalas = 0;
         salas = new ArrayList<>();
+        equipamentos = new ArrayList<>(); // Inicializa a lista
     }
 
-    public int cadastrarSala(SalaDeAula novaSala) {
-        if (salas.add(novaSala)) {
-            nSalas = salas.size();
-        }
-        return nSalas;
-    }
-
-    public SalaDeAula pesquisarSala(String identificador) {
-        for (SalaDeAula sala : salas) {
-            if (sala.getNome().equalsIgnoreCase(identificador)) {
-                return sala;
-            }
-        }
-        return null;
-    }
- 
-    public boolean removerSala(SalaDeAula sala) {
-        return salas.remove(sala);
-    }
-
-    public boolean atualizarSala(String identificador, SalaDeAula novaSala) {
-        SalaDeAula antiga = pesquisarSala(identificador);
-        if (antiga != null) {
-            salas.remove(antiga);
-            return salas.add(novaSala);
+    // Método para adicionar equipamento à sala
+    public boolean adicionarEquipamento(String identificadorSala, Equipamentos equipamento) {
+        SalaDeAula sala = pesquisarSala(identificadorSala);
+        if (sala != null) {
+            return sala.getEquipamentos().add(equipamento); // Assume que SalaDeAula tem uma lista de equipamentos
         }
         return false;
     }
 
-    public int getNumeroSalas() {
-        return nSalas;
-    }
-
-    public List<SalaDeAula> listarSalas() {
-        return new ArrayList<>(salas);
+    private SalaDeAula pesquisarSala(String identificadorSala) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'pesquisarSala'");
     }
 }
