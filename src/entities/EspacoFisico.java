@@ -11,18 +11,18 @@ public class EspacoFisico extends CadastroEspacoFisico {
 	String localizacao;
 	String equipamentos;
 
-	String sala1;
-	String tipo1;
-	String capacidade1;
-	String localizacao1;
-	String equipamentos1;
+	String sala11;
+	String tipo11;
+	String capacidade11;
+	String localizacao11;
+	String equipamentos11;
 
 
-	protected String sala;
-	protected String tipo;
-	protected String capacidade;
-	protected String localizacao;
-	protected String equipamentos;
+	protected String sala1;
+	protected String tipo1;
+	protected String capacidade1;
+	protected String localizacao1;
+	protected String equipamentos1;
  
 	
 	public String getTipo() {
@@ -31,68 +31,57 @@ public class EspacoFisico extends CadastroEspacoFisico {
 	
 	public EspacoFisico(String sala, String tipo, String capacidade, String localizacao, String equipamentos) {
 		super(sala, tipo, capacidade, localizacao, equipamentos);
-		this.sala1 = sala;
-		this.tipo1 = tipo;
-		this.capacidade1 = capacidade;
-		this.localizacao1 = localizacao;
-		this.equipamentos1 = equipamentos;
+		this.sala11 = sala;
+		this.tipo11 = tipo;
+		this.capacidade11 = capacidade;
+		this.localizacao11 = localizacao;
+		this.equipamentos11 = equipamentos;
 	}
 	
 	public String getSala() {
-		return sala1;
+		return sala11;
 	}
 
 	public void setSala(String sala) {
-		this.sala1 = sala;
+		this.sala11 = sala;
 	}
 
 	public String getCapacidade() {
-		return capacidade1;
+		return capacidade11;
 	}
 
 	public void setCapacidade(String capacidade) {
-		this.capacidade1 = capacidade;
+		this.capacidade11 = capacidade;
 	}
 
 	public String getLocalizacao() {
-		return localizacao1;
+		return localizacao11;
 	}
 
 	public void setLocalizacao(String localizacao) {
-		this.localizacao1 = localizacao;
+		this.localizacao11 = localizacao;
 	}
 
 	public String getEquipamentos() {
-		return equipamentos1;
+		return equipamentos11;
 	}
 
 	public void setEquipamentos(String equipamentos) {
-		this.equipamentos1 = equipamentos;
+		this.equipamentos11 = equipamentos;
 	}
 
 	public void setTipo(String tipo) {
-		this.tipo1 = tipo;
+		this.tipo11 = tipo;
 	}
 
 	public String toString(){
 		String resposta = super.toString();
 		resposta += '\n';
-		resposta += "LOCALIZAÇÃO: " + localizacao1 + '\n';
-		resposta += "SALA: " + sala1 + '\n';
-		resposta += "TIPO: " + tipo1 + '\n';
+		resposta += "LOCALIZAÇÃO: " + localizacao11 + '\n';
+		resposta += "SALA: " + sala11 + '\n';
+		resposta += "TIPO: " + tipo11 + '\n';
 	
 		return resposta;
 	}
+}
 
-	}
-<<<<<<< HEAD
-
-	
-<<<<<<< HEAD
-
-=======
-	
-
-=======
->>>>>>> refs/remotes/origin/main
->>>>>>> 620a2f2a950c79be56746febcb425f2724a90b1c

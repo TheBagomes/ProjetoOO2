@@ -28,12 +28,12 @@ public class CadastroEspacoFisico {
 	        return nEspacoFisico;
 	    }
 
-<<<<<<< HEAD
+
 		public int cadastroDeEquipamentos(equipamento)
 
 	    public EspacoFisico pesquisarEspacoFisico(String matriculaEspacoFisico){
 	        for(EspacoFisico ok: EspacoFisico){
-	            if(ok.getatriculaServ().equalsIgnoreCase(matriculaEspacoFisico)){
+	            if(ok.getmatriculaServ().equalsIgnoreCase(matriculaEspacoFisico)){
 	                return ok;
 	            }
 	        }
@@ -41,16 +41,5 @@ public class CadastroEspacoFisico {
 	    }
 
 
-		public boolean atualizarEspacoFisico(String sala, EspacoFisico novoCadastro) {
-			// TODO Auto-generated method stub
-			throw new UnsupportedOperationException("Unimplemented method 'atualizarEspacoFisico'");
-		}
-
-        public boolean removerEspacoFisico(String sala, EspacoFisico remover) {
-            // TODO Auto-generated method stub
-            throw new UnsupportedOperationException("Unimplemented method 'removerEspacoFisico'");
-        }  
-=======
->>>>>>> refs/remotes/origin/main
-
+		
 }

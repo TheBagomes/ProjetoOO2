@@ -41,8 +41,7 @@ public class PessoaFisica {
 		this.telefone = telefone;
 	}
 	
-	// Eu não posso ultilizar esse método para senha e matrícula pois são atributos que não podem ser modificados livremente 
-	//cada "pessoa" deve ter a sua propria e senha e isso não pode ser mudado. 
+	 
 	
 	public String getSenha() {
 		return senha;
@@ -52,13 +51,7 @@ public class PessoaFisica {
 		this.senha = senha;
 	}
 
-	/*public String getMatricula(){
-		return matricula;
-	}
 
-	public void setMatricula(String matricula){
-		this.matricula = matricula;
-	}*/
 
 	public String armazString(){
 		String resposta = super.toString() + '\n';
