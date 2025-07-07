@@ -1,6 +1,7 @@
 package Cadastros.CadastoPessoaFisica;
 
 import entities.Professor;
+
 //import entities.PessoaFisica;
 
 import java.util.ArrayList;

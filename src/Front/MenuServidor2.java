@@ -2,6 +2,8 @@ package Front;
 
 import javax.swing.JOptionPane;
 
+import Cadastros.CadastoPessoaFisica.CadastroServidores;
+
 import entities.Servidor;
 
 public class MenuServidor2{

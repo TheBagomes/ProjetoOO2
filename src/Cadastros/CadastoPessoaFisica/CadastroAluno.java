@@ -1,7 +1,6 @@
 package Cadastros.CadastoPessoaFisica;
 
 import entities.Aluno;  
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +10,7 @@ public class CadastroAluno {
     private List<Aluno> alunos;
 
     public CadastroAluno(){
-        nAlunos = 0;
+        int nAlunos = 0;
         alunos = new ArrayList<Aluno>();
     }
 

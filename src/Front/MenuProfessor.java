@@ -2,6 +2,10 @@ package Front;
 
 import javax.swing.JOptionPane;
 
+
+
+import Cadastros.CadastroPessoaFisica.CadastroProfessor;
+
 import entities.Professor;
 
 public class MenuProfessor {

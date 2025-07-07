@@ -1,5 +1,10 @@
 package Cadastros.CadastroEspacoFisico;
 
+<<<<<<< HEAD
+=======
+import entities.SalaDeAula;
+
+>>>>>>> refs/remotes/origin/main
 import java.util.ArrayList;
 import java.util.List;
 

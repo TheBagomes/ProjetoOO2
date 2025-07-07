@@ -20,16 +20,7 @@ public class Auditorio extends EspacoFisico {
     }
 
     
-    /*@Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("TIPO: ").append(getTipo()).append('\n');
-        sb.append("NOME: ").append(nome).append('\n');
-        sb.append("CAPACIDADE: ").append(capacidade).append('\n');
-        sb.append("LOCALIZAÇÃO: ").append(localizacao).append('\n');
-        sb.append("EQUIPAMENTOS: ").append(equipamentos).append('\n');
-        return sb.toString();
-    }*/
+    
 
     public String toString(){
 		String resposta = super.toString();

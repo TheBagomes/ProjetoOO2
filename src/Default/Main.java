@@ -1,6 +1,8 @@
 package Default;
 
 import javax.swing.JOptionPane;
+
+
 import Front.MenuServidor2;
 import Front.MenuAluno;
 import Front.MenuPadrao;
@@ -31,7 +33,7 @@ public class Main {
 					MenuServidor2.frontServidor(cadServidor);
 				break;
 				case 4: 
-					JOptionPane.showMessageDialog(null, "Cadastro de turmas a ser implementado");
+					JOptionPane.showMessageDialog(null, "Opcao invalida");
 				break;
 				case 0: 
 				break;
