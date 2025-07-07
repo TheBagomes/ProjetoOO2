@@ -44,7 +44,7 @@ public class MenuAluno {
         String semestreInicial = lerSemestreInicial();
         return new Aluno(nome, email, telefone, senha, curso, matricula, semestreInicial); 
     }
-
+    
     public static void frontAluno(Cadastros.CadastoPessoaFisica.CadastroAluno cadAluno){
         String texto = "=== Menu de Aluno === \n"
                     + "1 - Fazer cadastro\n"

@@ -14,7 +14,7 @@ public class EspacoFisico extends CadastroEspacoFisico {
 	protected String capacidade;
 	protected String localizacao;
 	protected String equipamentos;
-
+ 
 	
 	public String getTipo() {
 		return null;
@@ -76,14 +76,3 @@ public class EspacoFisico extends CadastroEspacoFisico {
 	}
 
 	}
-
-	/*  Q isso?
-	 * 
-	@Override
-    public String toString() {
-        return String.format("[%s] %s - Capacidade: %d, Local: %s",
-                             getTipo(), tipo, capacidade, localizacao);
-    }
-    */
-	
-}

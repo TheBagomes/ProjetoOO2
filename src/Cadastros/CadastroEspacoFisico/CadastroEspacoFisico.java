@@ -16,6 +16,7 @@ public class CadastroEspacoFisico {
 	    public CadastroEspacoFisico(String sala, String tipo, String capacidade, String localizacao, String equipamentos){
 	        nEspacoFisico = 0;
 	        EspacoFisico = new ArrayList<EspacoFisico>();
+			Equipamentos = new ArrayList<equipamentos>(equipamentos);
 	    }
 
 	    public int cadastroEspacoFisico(EspacoFisico ok){
@@ -25,49 +26,6 @@ public class CadastroEspacoFisico {
 	        }
 	        return nEspacoFisico;
 	    }
-
-		public int cadastroDeEquipamentos(equipamento)
-
-	    public EspacoFisico pesquisarEspacoFisico(String matriculaEspacoFisico){
-	        for(EspacoFisico ok: EspacoFisico){
-	            if(ok.getatriculaServ().equalsIgnoreCase(matriculaEspacoFisico)){
-	                return ok;
-	            }
-	        }
-	        return null;
-	    }
-<<<<<<< HEAD
-		MAs todo menu precisa do Cadastro certo
-
-		public boolean atualizarEspacoFisico(String sala, EspacoFisico novoCadastro) {
-			// TODO Auto-generated method stub
-			throw new UnsupportedOperationException("Unimplemented method 'atualizarEspacoFisico'");
-		}
-
-        public boolean removerEspacoFisico(String sala, EspacoFisico remover) {
-            // TODO Auto-generated method stub
-            throw new UnsupportedOperationException("Unimplemented method 'removerEspacoFisico'");
-        }  ?
-=======
-		
->>>>>>> 4171bf1fe25d76b059647895a7b4cbdd69c29b42
-	    /*public boolean removerEspacoFisico(String sala, EspacoFisico ok){
-	        boolean removeu = false;
-	        if (EspacoFisico.contains(ok)){
-	            removeu = EspacoFisico.remove(ok);
-	        }
-	        return removeu;
-	    }*/
-
-	    /*public boolean atualizarServidor(String sala, entities.EspacoFisico ok){
-	         boolean resposta = false;
-	         EspacoFisico remover = pesquisarEspacoFisico(sala);
-	        if(remover != null){
-	        	EspacoFisico.remove(remover);
-	            resposta = EspacoFisico.add(ok);
-	        }
-	        return resposta;
-	    }*/
 
 
 }
