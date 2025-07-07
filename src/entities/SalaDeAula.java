@@ -24,7 +24,3 @@ public class SalaDeAula extends EspacoFisico{
 		return resposta;
 	}
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/main

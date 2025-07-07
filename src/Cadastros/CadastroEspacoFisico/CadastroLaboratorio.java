@@ -29,8 +29,7 @@ public class CadastroLaboratorio {
         }
         return null;
     }
-Só esses agora e GG izi 
-ff ao 15
+
     public boolean removerLaboratorio(Laboratorio lab) {
         return laboratorios.remove(lab);
     }
