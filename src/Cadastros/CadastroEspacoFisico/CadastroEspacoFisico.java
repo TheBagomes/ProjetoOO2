@@ -36,6 +36,7 @@ public class CadastroEspacoFisico {
 	        }
 	        return null;
 	    }
+<<<<<<< HEAD
 		MAs todo menu precisa do Cadastro certo
 
 		public boolean atualizarEspacoFisico(String sala, EspacoFisico novoCadastro) {
@@ -47,6 +48,9 @@ public class CadastroEspacoFisico {
             // TODO Auto-generated method stub
             throw new UnsupportedOperationException("Unimplemented method 'removerEspacoFisico'");
         }  ?
+=======
+		
+>>>>>>> 4171bf1fe25d76b059647895a7b4cbdd69c29b42
 	    /*public boolean removerEspacoFisico(String sala, EspacoFisico ok){
 	        boolean removeu = false;
 	        if (EspacoFisico.contains(ok)){
