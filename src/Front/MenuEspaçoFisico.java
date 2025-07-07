@@ -1,8 +1,9 @@
 package Front;
 
-import java.util.List;
+
 import javax.swing.JOptionPane;
-import Cadastros.CadastroEspacoFisico;
+
+import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
 import entities.EspacoFisico;
 
 public class MenuEspaçoFisico {
@@ -96,6 +97,8 @@ public class MenuEspaçoFisico {
 	        } while (escolha != 0); 
 	        return;
 	    }
+
+		
 	    
 	
 }

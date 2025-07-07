@@ -1,4 +1,4 @@
-package Cadastros;
+package Cadastros.CadastoPessoaFisica;
 
 import entities.Servidor;
 
@@ -51,5 +51,3 @@ public class CadastroServidores {
 
 
 }
-
-

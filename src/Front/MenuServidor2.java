@@ -2,38 +2,38 @@ package Front;
 
 import javax.swing.JOptionPane;
 
+import Cadastros.CadastroPessoaFisica.CadastroServidores;
 import entities.Servidor;
-import Cadastros.CadastroServidores;
 
 public class MenuServidor2{
 
     private static String lerNome(){
-         return JOptionPane.showInputDialog("Informe o nome do servidor: ");
+         return JOptionPane.showInputDialog("Informe o nome do(a) servidor(a): ");
 
     }
     private static String lerEmail(){
-        return JOptionPane.showInputDialog("Informe o Email do Servidor: ");
+        return JOptionPane.showInputDialog("Informe o Email do(a) servidor(a): ");
 
     }
     private static String lerMatriculaServ(){
-        return JOptionPane.showInputDialog("Informe a matricula do servidor: ");
+        return JOptionPane.showInputDialog("Informe a matricula do(a) servidor(a): ");
     }
 
     private static String lerTelefone(){
-        return JOptionPane.showInputDialog("Informe o telefone do servidor: ");
+        return JOptionPane.showInputDialog("Informe o telefone do(a) servidor(a): ");
 
     }
     private static String lerSenha(){
-        return JOptionPane.showInputDialog("Informe a senha do servidor: ");
+        return JOptionPane.showInputDialog("Informe a senha do(a) servidor(a): ");
     }
     private static String lerCargoSer(){
-        return JOptionPane.showInputDialog("Informe o cargo do servidor: ");
+        return JOptionPane.showInputDialog("Informe o cargo do(a) servidor(a): ");
     }
     private static String lerDepartamento(){
-        return JOptionPane.showInputDialog("Informe o Departamento do servidor: ");
+        return JOptionPane.showInputDialog("Informe o Departamento do(a) servidor(a): ");
     }
     private static String lerfuncao(){
-        return JOptionPane.showInputDialog("Informe a função do servidor: ");
+        return JOptionPane.showInputDialog("Informe a função do(a) servidor(a): ");
     }
     
     

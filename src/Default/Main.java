@@ -2,10 +2,9 @@ package Default;
 
 import javax.swing.JOptionPane;
 import Front.MenuServidor2;
-
-import Cadastros.CadastroAluno;
-import Cadastros.CadastroProfessor;
-import Cadastros.CadastroServidores;
+import Cadastros.CadastroPessoaFisica.CadastroAluno;
+import Cadastros.CadastroPessoaFisica.CadastroProfessor;
+import Cadastros.CadastroPessoaFisica.CadastroServidores;
 import Front.MenuAluno;
 import Front.MenuPadrao;
 import Front.MenuProfessor;

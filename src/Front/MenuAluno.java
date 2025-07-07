@@ -2,28 +2,28 @@ package Front;
 
 import javax.swing.JOptionPane;
 
+import Cadastros.CadastroPessoaFisica.CadastroAluno;
 import entities.Aluno;
-import Cadastros.CadastroAluno;
 
 public class MenuAluno {
 
     private static String lerCurso(){
-        return JOptionPane.showInputDialog("Informe o curso do aluno(a): ");
+        return JOptionPane.showInputDialog("Informe o curso do(a) aluno(a): ");
     }
     private static String lerEmail() {
-		return JOptionPane.showInputDialog("Informe o email do aluno(a): ");
+		return JOptionPane.showInputDialog("Informe o email do(a) aluno(a): ");
 	}
 
 	private static String lerTelefone() {
-		return JOptionPane.showInputDialog("Informe o telefone de contato do aluno(a): ");
+		return JOptionPane.showInputDialog("Informe o telefone de contato do(a) aluno(a): ");
 	}
 
 	private static String lerNome() {
-		return JOptionPane.showInputDialog("Informe o nome do aluno(a): ");
+		return JOptionPane.showInputDialog("Informe o nome do(a) aluno(a): ");
 	}
 
 	private static String lerMatricula() {
-		return JOptionPane.showInputDialog("Informe a matricula do aluno(a): ");
+		return JOptionPane.showInputDialog("Informe a matricula do(a) aluno(a): ");
 	}
 
     private static String lerSenha(){
@@ -31,7 +31,7 @@ public class MenuAluno {
     }
     
     private static String lerSemestreInicial(){
-        return JOptionPane.showInputDialog("Informe o semestre inicial do aluno(a): ");
+        return JOptionPane.showInputDialog("Informe o semestre inicial do(a) aluno(a): ");
     }
 
 
@@ -100,9 +100,6 @@ public class MenuAluno {
         } while (escolha != 0); 
         return;
     }
-    /*public static void MenuAluno(CadastroAluno cadAluno) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'MenuAluno'");
-    }*/
+    
 
 }

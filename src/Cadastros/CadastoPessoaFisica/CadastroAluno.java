@@ -1,7 +1,6 @@
-package Cadastros;
+package Cadastros.CadastoPessoaFisica;
 
 import entities.Aluno;  
-//import entities.PessoaFisica;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,7 +50,4 @@ public class CadastroAluno {
         }
         return resposta;
     }
-
-
-
 }
