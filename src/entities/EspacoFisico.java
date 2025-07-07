@@ -4,11 +4,19 @@ import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
 
 public class EspacoFisico extends CadastroEspacoFisico {
 	
+
 	String sala;
 	String tipo;
 	int capacidade;
 	String localizacao;
 	String equipamentos;
+
+	String sala1;
+	String tipo1;
+	String capacidade1;
+	String localizacao1;
+	String equipamentos1;
+
 
 	protected String sala;
 	protected String tipo;
@@ -23,63 +31,60 @@ public class EspacoFisico extends CadastroEspacoFisico {
 	
 	public EspacoFisico(String sala, String tipo, String capacidade, String localizacao, String equipamentos) {
 		super(sala, tipo, capacidade, localizacao, equipamentos);
-		this.sala = sala;
-		this.tipo = tipo;
-		this.capacidade = capacidade;
-		this.localizacao = localizacao;
-		this.equipamentos = equipamentos;
+		this.sala1 = sala;
+		this.tipo1 = tipo;
+		this.capacidade1 = capacidade;
+		this.localizacao1 = localizacao;
+		this.equipamentos1 = equipamentos;
 	}
 	
 	public String getSala() {
-		return sala;
+		return sala1;
 	}
 
 	public void setSala(String sala) {
-		this.sala = sala;
+		this.sala1 = sala;
 	}
 
 	public String getCapacidade() {
-		return capacidade;
+		return capacidade1;
 	}
 
 	public void setCapacidade(String capacidade) {
-		this.capacidade = capacidade;
+		this.capacidade1 = capacidade;
 	}
 
 	public String getLocalizacao() {
-		return localizacao;
+		return localizacao1;
 	}
 
 	public void setLocalizacao(String localizacao) {
-		this.localizacao = localizacao;
+		this.localizacao1 = localizacao;
 	}
 
 	public String getEquipamentos() {
-		return equipamentos;
+		return equipamentos1;
 	}
 
 	public void setEquipamentos(String equipamentos) {
-		this.equipamentos = equipamentos;
+		this.equipamentos1 = equipamentos;
 	}
 
 	public void setTipo(String tipo) {
-		this.tipo = tipo;
+		this.tipo1 = tipo;
 	}
 
 	public String toString(){
 		String resposta = super.toString();
 		resposta += '\n';
-		resposta += "LOCALIZAÇÃO: " + localizacao + '\n';
-		resposta += "SALA: " + sala + '\n';
-		resposta += "TIPO: " + tipo + '\n';
+		resposta += "LOCALIZAÇÃO: " + localizacao1 + '\n';
+		resposta += "SALA: " + sala1 + '\n';
+		resposta += "TIPO: " + tipo1 + '\n';
 	
 		return resposta;
 	}
 
-	public String getatriculaServ() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'getatriculaServ'");
 	}
 
 	
-}
+
