@@ -26,6 +26,3 @@ public class SalaDeAula extends EspacoFisico{
 		return resposta;
 	}
 }
-
-Precisa ele pede 
-//Suicidio e sempre uma opção 
