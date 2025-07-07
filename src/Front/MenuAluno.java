@@ -46,7 +46,7 @@ public class MenuAluno {
         return new Aluno(nome, email, telefone, senha, curso, matricula, semestreInicial); 
     }
 
-    public static void frontAluno(CadastroAluno cadAluno){
+    public static void frontAluno(Cadastros.CadastoPessoaFisica.CadastroAluno cadAluno){
         String texto = "=== Menu de Aluno === \n"
                     + "1 - Fazer cadastro\n"
                     + "2 - Pesquisar aluno\n"
