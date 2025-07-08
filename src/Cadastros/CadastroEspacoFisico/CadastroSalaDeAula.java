@@ -4,15 +4,13 @@ import entities.SalaDeAula;
 import java.util.ArrayList;
 import java.util.List;
 
-import entities.SalaDeAula;
-
 public class CadastroSalaDeAula {
     private List<SalaDeAula> salas;
     private List<Equipamentos> equipamentos; // Lista compartilhada (ou pode ser por sala)
 
     public CadastroSalaDeAula() {
         salas = new ArrayList<>();
-        equipamentos = new ArrayList<>(); // Inicializa a lista
+        Equipamentos = new ArrayList<>(); // Inicializa a lista
     }
 
     // Método para adicionar equipamento à sala
@@ -31,6 +29,7 @@ public class CadastroSalaDeAula {
         }               
         throw new UnsupportedOperationException("Unimplemented method 'pesquisarSala'");
     }
+    return null;
 
 }
 
