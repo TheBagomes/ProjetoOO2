@@ -123,6 +123,10 @@ public class MenuEspaçoFisico {
     } while (escolha != 0);
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 413a96ce728f13497f0079d2acf6c8d559af4d96
 		@Override
 		public String toString() {
 			return "MenuEspaçoFisico []";
@@ -131,6 +135,10 @@ public class MenuEspaçoFisico {
 		
 	    
 	
+<<<<<<< HEAD
+=======
+
+>>>>>>> 413a96ce728f13497f0079d2acf6c8d559af4d96
 
 	public static void menuAgendamento(CadastroEspacoFisico cadEspacoFisico) {
     String texto = "=== Agendamento de Sala === \n"
