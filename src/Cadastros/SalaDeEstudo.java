@@ -2,16 +2,15 @@ package Cadastros;
 
 import entities.EspacoFisico;
 
-import java.util.List;
-
-
 public class SalaDeEstudo extends EspacoFisico {
 
-    public SalaDeEstudo(String nome,
-                        int capacidade,
-                        String localizacao,
-                        String equipamentos) {
-        super(nome, capacidade, localizacao, equipamentos);
+    public SalaDeEstudo(
+    		String nome,
+    		String tipo,
+    		String capacidade,
+    		String localizacao,
+    		String equipamentos) {
+        super(nome, tipo, capacidade, localizacao, equipamentos);
     }
 
     @Override

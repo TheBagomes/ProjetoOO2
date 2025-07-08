@@ -2,9 +2,7 @@ package Front;
 
 import javax.swing.JOptionPane;
 
-
-
-import Cadastros.CadastroPessoaFisica.CadastroProfessor;
+//import Cadastros.CadastoPessoaFisica.CadastroProfessor;
 
 import entities.Professor;
 

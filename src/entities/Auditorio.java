@@ -1,12 +1,9 @@
 package entities;
 
-
-import java.util.List;
-
-
 public class Auditorio extends EspacoFisico {
 
-    public Auditorio(String nome,
+    public Auditorio(
+    	String nome,
 		String tipo,
         String capacidade,
         String localizacao,
@@ -20,12 +17,10 @@ public class Auditorio extends EspacoFisico {
     }
 
     
-    
-
     public String toString(){
 		String resposta = super.toString();
 		resposta += '\n';
-		resposta += "Qual o Nome/Numero da sala: " + sala + '\n';
+		resposta += "Qual o Nome/Numero da sala: " + /*sala*/ + '\n';
 		resposta += "Qual a capacidade " + capacidade + '\n';
 		resposta += "Qual a Localizaçâo: " + localizacao + '\n';
 		resposta += "Quais são os equipamentos: " + equipamentos + '\n';

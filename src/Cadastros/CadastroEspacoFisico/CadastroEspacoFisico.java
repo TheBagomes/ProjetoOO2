@@ -16,19 +16,14 @@ public class CadastroEspacoFisico {
         espacos.add(espaco);
     }
 
-<<<<<<< HEAD
-}
-=======
 	    public int cadastroEspacoFisico(EspacoFisico ok){
 	        boolean cadastrou = EspacoFisico.add(ok);
-	        if(cadastrou){
+	        Object nEspacoFisico;
+			if(cadastrou){
 	            nEspacoFisico = EspacoFisico.size();
 	        }
 	        return nEspacoFisico;
 	    }
-
-
-		public int cadastroDeEquipamentos(equipamento)
 
 	    public EspacoFisico pesquisarEspacoFisico(String matriculaEspacoFisico){
 	        for(EspacoFisico ok: EspacoFisico){
@@ -38,8 +33,6 @@ public class CadastroEspacoFisico {
 	        }
 	        return null;
 	    }
-
-
 		
 }
->>>>>>> refs/remotes/origin/main
+
