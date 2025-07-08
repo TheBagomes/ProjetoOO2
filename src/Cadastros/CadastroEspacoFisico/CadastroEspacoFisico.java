@@ -1,38 +1,52 @@
 package Cadastros.CadastroEspacoFisico;
 
 import java.util.ArrayList;
-
 import java.util.List;
 import entities.EspacoFisico;
 
 public class CadastroEspacoFisico {
+	int nEspacoFisico;
     private List<EspacoFisico> espacos;
 
     public CadastroEspacoFisico() {
-        this.espacos = new ArrayList<>();
-    }
-
-    public void cadastrarEspaco(EspacoFisico espaco) {
-        espacos.add(espaco);
+        espacos = new ArrayList<EspacoFisico>();
     }
 
 	    public int cadastroEspacoFisico(EspacoFisico ok){
-	        boolean cadastrou = EspacoFisico.add(ok);
-	        Object nEspacoFisico;
+	        boolean cadastrou = espacos.add(ok);
 			if(cadastrou){
-	            nEspacoFisico = EspacoFisico.size();
+	            nEspacoFisico = espacos.size();
 	        }
 	        return nEspacoFisico;
 	    }
-
+	    
 	    public EspacoFisico pesquisarEspacoFisico(String matriculaEspacoFisico){
-	        for(EspacoFisico ok: EspacoFisico){
-	            if(ok.getmatriculaServ().equalsIgnoreCase(matriculaEspacoFisico)){
+	        for(EspacoFisico ok: espacos){
+	            if(ok.getNome().equalsIgnoreCase(matriculaEspacoFisico)){
 	                return ok;
 	            }
 	        }
 	        return null;
 	    }
+	    
+	    
+		public boolean atualizarEspacoFisico(String sala, EspacoFisico ok) {
+			boolean resposta = false; 
+			EspacoFisico remover = pesquisarEspacoFisico(sala); 
+			if(remover != null){
+				espacos.remove(remover);
+				resposta = espacos.add(ok);
+			}
+			return resposta;
+		}
+		
+		public boolean removerEspacoFisico(EspacoFisico ok) {
+			boolean removeu = false;
+			if(espacos.contains(ok)) {
+				removeu = espacos.remove(ok);
+			}
+			return removeu;
+		}
 		
 }
 

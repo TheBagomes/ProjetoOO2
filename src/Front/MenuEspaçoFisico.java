@@ -1,8 +1,6 @@
 package Front;
 
-
 import javax.swing.JOptionPane;
-
 import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
 import entities.EspacoFisico;
 
@@ -82,7 +80,7 @@ public class MenuEspaçoFisico {
 	                case 4:
 	                    sala = lerSala();
 	                    EspacoFisico remover = cadEspacoFisico.pesquisarEspacoFisico(sala);
-					boolean removido = cadEspacoFisico.removerEspacoFisico(sala, remover);
+					boolean removido = cadEspacoFisico.removerEspacoFisico(remover);
 					if (removido) {
 						JOptionPane.showMessageDialog(null, "Sala removida do cadastro");
 						System.gc();
@@ -90,8 +88,7 @@ public class MenuEspaçoFisico {
 
 				    default:
 					    break;
-	                
-
+	               
 	            }
 
 	        } while (escolha != 0); 

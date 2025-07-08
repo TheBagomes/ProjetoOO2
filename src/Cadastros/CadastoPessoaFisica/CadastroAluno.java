@@ -1,7 +1,6 @@
 package Cadastros.CadastoPessoaFisica;
 
 import entities.Aluno;  
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,8 +8,7 @@ public class CadastroAluno {
     int nAlunos;
     private List<Aluno> alunos;
 
-    public CadastroAluno(){
-        
+    public CadastroAluno(){ 
         alunos = new ArrayList<Aluno>();
     }
 
@@ -31,15 +29,7 @@ public class CadastroAluno {
         return null;
 
     }
-
-    public boolean removerAluno(Aluno pos) {
-		boolean removeu = false; 
-		if (alunos.contains(pos)) {
-			removeu = alunos.remove(pos);
-		}
-		return removeu;
-	}
-
+    
     public boolean atualizarAluno(String matricula, Aluno pos){
         boolean resposta = false;
         Aluno remover = pesquisarAluno(matricula);
@@ -49,4 +39,13 @@ public class CadastroAluno {
         }
         return resposta;
     }
+
+    public boolean removerAluno(Aluno pos) {
+		boolean removeu = false; 
+		if (alunos.contains(pos)) {
+			removeu = alunos.remove(pos);
+		}
+		return removeu;
+	}
+
 }

@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import Cadastros.CadastroEspacoFisico.Equipamentos;
 
-public abstract class EspacoFisico {  // Classe abstrata (não pode ser instanciada diretamente)
-    protected String nome;
-    protected String tipo;
-    protected String capacidade;
-    protected String localizacao;
-    protected List<Equipamentos> equipamentos;  // Agora é uma lista de objetos!
+public class EspacoFisico {  // Classe abstrata (não pode ser instanciada diretamente)
+    private String nome;
+    private String tipo;
+    private String capacidade;
+    private String localizacao;
+    private List<Equipamentos> equipamentos;  // Agora é uma lista de objetos!
 
     // Construtor
     public EspacoFisico(String nome, String tipo, String capacidade, String localizacao, String equipamentos) {
@@ -20,31 +20,70 @@ public abstract class EspacoFisico {  // Classe abstrata (não pode ser instanci
         this.equipamentos = new ArrayList<>();  // Inicializa a lista vazia
     }
 
-    // Getters e Setters
+ 
     public String getNome() {
-        return nome;
-    }
+		return nome;
+	}
 
-    public String getTipo() {
-        return tipo;
-    }
 
-    public List<Equipamentos> getEquipamentos() {
-        return equipamentos;
-    }
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
-    // Adiciona um equipamento à lista
-    public void adicionarEquipamento(Equipamentos equipamento) {
-        this.equipamentos.add(equipamento);
-    }
 
-    @Override
-    public String toString() {
-        return "NOME: " + nome + "\n" +
-               "TIPO: " + tipo + "\n" +
-               "CAPACIDADE: " + capacidade + "\n" +
-               "LOCALIZAÇÃO: " + localizacao;
-    }
+	public String getTipo() {
+		return tipo;
+	}
+
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+
+	public String getCapacidade() {
+		return capacidade;
+	}
+
+
+	public void setCapacidade(String capacidade) {
+		this.capacidade = capacidade;
+	}
+
+
+	public String getLocalizacao() {
+		return localizacao;
+	}
+
+
+	public void setLocalizacao(String localizacao) {
+		this.localizacao = localizacao;
+	}
+
+
+	public List<Equipamentos> getEquipamentos() {
+		return equipamentos;
+	}
+
+
+	public void setEquipamentos(List<Equipamentos> equipamentos) {
+		this.equipamentos = equipamentos;
+	}
+	
+	protected void destruidor() throws Throwable{
+		System.out.println("Destruindo Objeto: " + this);
+	}
+	
+	public String toString(){
+		String resposta = super.toString();
+		resposta += '\n';
+		resposta += "NOME: " + nome + '\n';
+		resposta += "CURSO: " + tipo + '\n';
+		resposta += "SEMESTRE INICIAL: " + capacidade + '\n';
+		resposta += "MATRICULA: " + localizacao + '\n';
+	
+		return resposta;
+	}
 
 	
 }

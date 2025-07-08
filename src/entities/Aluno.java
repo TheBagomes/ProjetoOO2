@@ -3,12 +3,8 @@ package entities;
 public class Aluno extends PessoaFisica {
 	private String curso;
 	private String matricula;
-	//Porque o semestre não pode ser Uma String ????
-	//ate pq e o semestre inicial então a resposta guardada dentro dele seria --2024/1--
 	private String semestreInicial; 
 	
-	
-
 	public Aluno(String nome, String email, String telefone, String senha, /*String matricula,*/String curso, String matricula, String semestreInicial) {
 		super(nome, email, telefone, senha);
 		this.curso = curso;

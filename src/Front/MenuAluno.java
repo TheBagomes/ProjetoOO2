@@ -1,7 +1,6 @@
 package Front;
 
 import javax.swing.JOptionPane;
-
 import entities.Aluno;
 
 public class MenuAluno {

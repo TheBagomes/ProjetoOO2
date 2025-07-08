@@ -2,9 +2,9 @@ package Default;
 
 import javax.swing.JOptionPane;
 
-
 import Front.MenuServidor2;
 import Front.MenuAluno;
+import Front.MenuEspaçoFisico;
 import Front.MenuPadrao;
 import Front.MenuProfessor;
 
@@ -12,6 +12,7 @@ public class Main {
     static Cadastros.CadastoPessoaFisica.CadastroAluno cadAluno;
     static Cadastros.CadastoPessoaFisica.CadastroProfessor cadProfessor;
     static Cadastros.CadastoPessoaFisica.CadastroServidores cadServidor;
+    static Cadastros.CadastroEspacoFisico.CadastroEspacoFisico cadEspacoFisico;
 	
 	public static void main(String[] args) {
 		cadAluno = new Cadastros.CadastoPessoaFisica.CadastroAluno();
@@ -33,7 +34,7 @@ public class Main {
 					MenuServidor2.frontServidor(cadServidor);
 				break;
 				case 4: 
-					JOptionPane.showMessageDialog(null, "Opcao invalida");
+					MenuEspaçoFisico.frontEspacoFisico(cadEspacoFisico);
 				break;
 				case 0: 
 				break;
