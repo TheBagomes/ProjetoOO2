@@ -5,12 +5,12 @@ import entities.EspacoFisico;
 public class Auditorio extends EspacoFisico {
 
     public Auditorio(
-    		String nome,
+    		String sala,
     		String tipo,
     		String capacidade,
     		String localizacao,
     		String equipamentos) {
-        super(nome, tipo, capacidade, localizacao, equipamentos);
+        super(sala, tipo, capacidade, localizacao, equipamentos);
     }
 
     @Override
@@ -23,7 +23,7 @@ public class Auditorio extends EspacoFisico {
         String resposta = super.toString();
         resposta += '\n';
         resposta += "TIPO: " + getTipo() + '\n';
-        resposta += "NOME: " + nome + '\n';
+        resposta += "NOME: " + sala + '\n';
         resposta += "CAPACIDADE: " + capacidade + '\n';
         resposta += "LOCALIZAÇÃO: " + localizacao + '\n';
         resposta += "EQUIPAMENTOS: " + equipamentos + '\n';

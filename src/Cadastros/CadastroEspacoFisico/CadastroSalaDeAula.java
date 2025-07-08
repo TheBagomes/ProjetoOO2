@@ -1,6 +1,6 @@
 package Cadastros.CadastroEspacoFisico;
-
 import entities.SalaDeAula;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,9 +23,6 @@ public class CadastroSalaDeAula {
         }
         return false;
     }
+    
 
-    private SalaDeAula pesquisarSala(String identificadorSala) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'pesquisarSala'");
-    }
 }

@@ -4,8 +4,8 @@ package entities;
 
 public class Laboratorio extends EspacoFisico{
 
-	public Laboratorio(String nome, String tipo, String capacidade, String localizacao, String equipamentos) {
-		super(nome, tipo, capacidade, localizacao, equipamentos);
+	public Laboratorio(String sala, String tipo, String capacidade, String localizacao, String equipamentos) {
+		super(sala, tipo, capacidade, localizacao, equipamentos);
 	}
 
 	@Override
