@@ -1,12 +1,13 @@
 package Front;
 
 import javax.swing.JOptionPane;
-import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
-import entities.EspacoFisico;
 
-public class MenuEspaçoFisico {
+import Cadastros.CadastroEspacoFisico.CadastroSalaDeAula;
+import entities.SalaDeAula;
 
-	 private static String lerSala(){
+
+public class MenuSalaDeAula{
+     private static String lerSala(){
          return JOptionPane.showInputDialog("Informe o nome da sala: ");
 
     }
@@ -32,17 +33,17 @@ public class MenuEspaçoFisico {
 		
 	 
 	 
-	public static EspacoFisico dadosNovoEspacoFisico(){
+	public static SalaDeAula dadosNovoEspacoFisico(){
 	        String sala = lerSala();
 	        String tipo = lerTipo();
 	        String capacidade = lerCapacidade();
 	        String localizacao = lerLocalizacao();
 	        String equipamentos = lerEquipamentos();
 	     
-	        return new EspacoFisico( sala, tipo,  capacidade, localizacao, equipamentos);
+	        return new SalaDeAula( sala, tipo,  capacidade, localizacao, equipamentos);
 	    }
 	    
-	    public static void frontEspacoFisico(CadastroEspacoFisico cadEspacoFisico) {
+	    public static void frontEspacoFisico(CadastroSalaDeAula cadSalaDeAula) {
     String texto = "=== Menu de Espaço Físico === \n"
             + "1 - Cadastrar sala\n"
             + "2 - Pesquisar sala\n"
@@ -64,14 +65,14 @@ public class MenuEspaçoFisico {
 
             switch (escolha) {
                 case 1:
-	                	EspacoFisico novoEspacoFisico = dadosNovoEspacoFisico();
-	                    cadEspacoFisico.cadastroEspacoFisico((novoEspacoFisico));
+	                	SalaDeAula novoSalaDeAula = dadosNovoSalaDeAula();
+	                    cadSalaDeAula.CadastroSalaDeAula((novoSalaDeAula));
 	                    break;
 
                 case 2:
                     String sala = lerSala();
                     if (sala != null) {
-                        EspacoFisico encontrado = cadEspacoFisico.pesquisarEspacoFisico(sala);
+                        SalaDeAula encontrado = cadSalaDeAula.pesquisarEspacoFisico(sala);
                         JOptionPane.showMessageDialog(null, 
                             encontrado != null ? encontrado.toString() : "Sala não encontrada.");
                     }
@@ -80,9 +81,9 @@ public class MenuEspaçoFisico {
                 case 3:
                     sala = lerSala();
                     if (sala != null) {
-                        EspacoFisico atualizado = dadosNovoEspacoFisico();
+                        SalaDeAula atualizado = dadosNovoEspacoFisico();
                         if (atualizado != null) {
-                            boolean sucesso = cadEspacoFisico.atualizarEspacoFisico(sala, atualizado);
+                            boolean sucesso = cadSalaDeAula.atualizarEspacoFisico(sala, atualizado);
                             JOptionPane.showMessageDialog(null, 
                                 sucesso ? "Sala atualizada!" : "Falha ao atualizar.");
                         }
@@ -96,7 +97,7 @@ public class MenuEspaçoFisico {
                         String horario = JOptionPane.showInputDialog("Informe o horário (HH:MM):");
                         
                         // Aqui você pode chamar um método de agendamento no CadastroEspacoFisico
-                        boolean agendado = cadEspacoFisico.agendarEspacoFisico(sala, data, horario);
+                        boolean agendado = cadSalaDeAula.agendarEspacoFisico(sala, data, horario);
                         JOptionPane.showMessageDialog(null, 
                             agendado ? "Sala agendada com sucesso!" : "Falha ao agendar.");
                     }
@@ -104,8 +105,8 @@ public class MenuEspaçoFisico {
 
                 case 5:
 	                    sala = lerSala();
-	                    EspacoFisico remover = cadEspacoFisico.pesquisarEspacoFisico(sala);
-					boolean removido = cadEspacoFisico.removerEspacoFisico(remover);
+	                    SalaDeAula remover = cadSalaDeAula.pesquisarEspacoFisico(sala);
+					boolean removido = cadSalaDeAula.removerEspacoFisico(remover);
 					if (removido) {
 						JOptionPane.showMessageDialog(null, "Sala removida do cadastro");
 						System.gc();
@@ -132,7 +133,7 @@ public class MenuEspaçoFisico {
 	    
 	
 
-	public static void menuAgendamento(CadastroEspacoFisico cadEspacoFisico) {
+	public static void menuAgendamento(CadastroSalaDeAula cadSalaDeAula) {
     String texto = "=== Agendamento de Sala === \n"
             + "1 - Agendar sala\n"
             + "0 - Voltar";

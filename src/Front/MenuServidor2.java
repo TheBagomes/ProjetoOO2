@@ -2,7 +2,6 @@ package Front;
 
 import javax.swing.JOptionPane;
 
-import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
 import entities.Servidor;
 
 public class MenuServidor2{
@@ -95,8 +94,7 @@ public class MenuServidor2{
 					System.gc();
 				}
                 case 5:  // NOVO CASO - ABRE O MENU DE ESPAÇO FÍSICO
-                    CadastroEspacoFisico cadEspacoFisico = new CadastroEspacoFisico(); // Você precisa passar a instância correta
-                    MenuEspaçoFisico.frontEspacoFisico(cadEspacoFisico);
+                    MenuTipos.EscolherTipo();
                     break;
 
 			    default:

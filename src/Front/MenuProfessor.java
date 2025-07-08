@@ -96,8 +96,7 @@ public class MenuProfessor {
 				}
 
                 case 5:  // NOVO CASO - ABRE O MENU DE ESPAÇO FÍSICO
-                    CadastroEspacoFisico cadEspacoFisico = new CadastroEspacoFisico(); // Você precisa passar a instância correta
-                    MenuEspaçoFisico.frontEspacoFisico(cadEspacoFisico);
+                    MenuTipos.EscolherTipo();
                     break;
 
 			    default:

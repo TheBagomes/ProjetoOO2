@@ -4,7 +4,7 @@ package entities;
 
 public class SalaDeAula extends EspacoFisico{
 
-	public SalaDeAula(String sala, String capacidade, String localizacao, String equipamentos) {
+	public SalaDeAula(String sala, String capacidade, String localizacao, String equipamentos, String equipamentos2) {
 		super(sala, "Sala de aula", capacidade, localizacao, equipamentos);
 	}
 
