@@ -45,13 +45,26 @@ public class CadastroEspacoFisico {
 			return resposta;
 	}
 		
+<<<<<<< HEAD
 	public boolean removerEspacoFisico(EspacoFisico ok) {
+=======
+		public boolean removerEspacoFisico(EspacoFisico remover) {
+>>>>>>> bec59f6dc74caa7cc4c865bbc5d9ffc30e1b49a5
 			boolean removeu = false;
-			if(espacos.contains(ok)) {
-				removeu = espacos.remove(ok);
+			if(espacos.contains(remover)) {
+				removeu = espacos.remove(remover);
 			}
 			return removeu;
+<<<<<<< HEAD
 	}
+=======
+		}
+
+        public boolean agendarEspacoFisico(String sala, String data, String horario) {
+            // TODO Auto-generated method stub
+            throw new UnsupportedOperationException("Unimplemented method 'agendarEspacoFisico'");
+        }
+>>>>>>> bec59f6dc74caa7cc4c865bbc5d9ffc30e1b49a5
 		
 }
 
