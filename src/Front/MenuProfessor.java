@@ -2,6 +2,8 @@ package Front;
 
 import javax.swing.JOptionPane;
 
+import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
+
 //import Cadastros.CadastoPessoaFisica.CadastroProfessor;
 
 import entities.Professor;
@@ -52,7 +54,9 @@ public class MenuProfessor {
                     + "2 - Pesquisar professor\n"
                     + "3 - Atualizar professor\n"
                     + "4 - Remover professor\n"
+                    + "5 - Gerenciar Espaços Físicos\n"  // NOVA OPÇÃO
                     + "0 - Voltar para menu anterior";
+
         
         int escolha = -1;
         do{
@@ -90,6 +94,11 @@ public class MenuProfessor {
 					JOptionPane.showMessageDialog(null, "Professor removido do cadastro");
 					System.gc();
 				}
+
+                case 5:  // NOVO CASO - ABRE O MENU DE ESPAÇO FÍSICO
+                    CadastroEspacoFisico cadEspacoFisico = new CadastroEspacoFisico(); // Você precisa passar a instância correta
+                    MenuEspaçoFisico.frontEspacoFisico(cadEspacoFisico);
+                    break;
 
 			    default:
 				    break;

@@ -1,6 +1,8 @@
 package Front;
 
 import javax.swing.JOptionPane;
+
+import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
 import entities.Aluno;
 
 public class MenuAluno {
@@ -46,12 +48,13 @@ public class MenuAluno {
     
     public static void frontAluno(Cadastros.CadastoPessoaFisica.CadastroAluno cadAluno){
         String texto = "=== Menu de Aluno === \n"
-                    + "1 - Fazer cadastro\n"
-                    + "2 - Pesquisar aluno\n"
-                    + "3 - Atualizar aluno\n"
-                    + "4 - Remover aluno\n"
-                    + "0 - Voltar para menu anterior";
-        
+            + "1 - Fazer cadastro\n"
+            + "2 - Pesquisar aluno\n"
+            + "3 - Atualizar aluno\n"
+            + "4 - Remover aluno\n"
+            + "5 - Gerenciar Espaços Físicos\n"  // NOVA OPÇÃO
+            + "0 - Voltar para menu anterior";
+
         int escolha = -1;
         do{
             String strEscolha = JOptionPane.showInputDialog(texto);
@@ -88,6 +91,11 @@ public class MenuAluno {
 					JOptionPane.showMessageDialog(null, "Aluno removido do cadastro");
 					System.gc();
 				}
+
+                case 5:  // NOVO CASO - ABRE O MENU DE ESPAÇO FÍSICO
+                    CadastroEspacoFisico cadEspacoFisico = new CadastroEspacoFisico(); // Você precisa passar a instância correta
+                    MenuEspaçoFisico.frontEspacoFisico(cadEspacoFisico);
+                    break;
 
 			    default:
 				    break;

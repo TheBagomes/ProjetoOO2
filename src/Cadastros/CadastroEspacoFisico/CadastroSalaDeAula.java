@@ -23,9 +23,8 @@ public class CadastroSalaDeAula {
     }
     
 
-<<<<<<< HEAD
-}
-=======
+
+
     private SalaDeAula pesquisarSala(String identificadorSala) {
     for (SalaDeAula sala : salas) {
         if (sala.getIdentificador().equalsIgnoreCase(identificadorSala)) {      

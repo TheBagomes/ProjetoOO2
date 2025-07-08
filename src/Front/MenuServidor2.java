@@ -1,6 +1,8 @@
 package Front;
 
 import javax.swing.JOptionPane;
+
+import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
 import entities.Servidor;
 
 public class MenuServidor2{
@@ -53,6 +55,7 @@ public class MenuServidor2{
                     + "2 - Pesquisar Servidor\n"
                     + "3 - Atualizar Servidor\n"
                     + "4 - Remover Servidor\n"
+                    + "5 - Gerenciar Espaços Físicos\n"  // NOVA OPÇÃO
                     + "0 - Voltar para menu anterior";
         
         int escolha = -1;
@@ -91,6 +94,10 @@ public class MenuServidor2{
 					JOptionPane.showMessageDialog(null, "Servidor(a) removido do cadastro");
 					System.gc();
 				}
+                case 5:  // NOVO CASO - ABRE O MENU DE ESPAÇO FÍSICO
+                    CadastroEspacoFisico cadEspacoFisico = new CadastroEspacoFisico(); // Você precisa passar a instância correta
+                    MenuEspaçoFisico.frontEspacoFisico(cadEspacoFisico);
+                    break;
 
 			    default:
 				    break;
