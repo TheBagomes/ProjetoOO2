@@ -4,7 +4,7 @@ public class Equipamentos {
     private String nome;
     private int quantidade;
 
-    public Equipamentos(String nome, String descricao, int quantidade) {
+    public Equipamentos(String nome, int quantidade) {
         this.nome = nome;
         this.quantidade = quantidade;
     }

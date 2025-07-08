@@ -25,11 +25,12 @@ public class MenuEspaçoFisico {
          return JOptionPane.showInputDialog("Informe a localização da sala: ");
 
     }
-	 
-	 private static String lerEquipamentos(){
-         return JOptionPane.showInputDialog("Informe os equipamentos da sala: ");
+	private static String lerEquipamentos(){
+        return JOptionPane.showInputDialog("Informe os equipamentos da sala: ");
 
     }
+		
+	 
 	 
 	public static EspacoFisico dadosNovoEspacoFisico(){
 	        String sala = lerSala();
@@ -94,6 +95,11 @@ public class MenuEspaçoFisico {
 	        } while (escolha != 0); 
 	        return;
 	    }
+
+		@Override
+		public String toString() {
+			return "MenuEspaçoFisico []";
+		}
 
 		
 	    

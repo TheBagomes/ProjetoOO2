@@ -39,7 +39,7 @@ public class Main {
 				case 0: 
 				break;
 				default: 
-					JOptionPane.showMessageDialog(null, "Opcao invalida");
+					JOptionPane.showMessageDialog(null, "Opcao inválida");
 					escolha = -1;
 				break;
 			}

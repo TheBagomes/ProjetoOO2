@@ -40,9 +40,12 @@ public class EspacoFisico {
 
     @Override
     public String toString() {
-        return "NOME: " + sala + "\n" +
-               "TIPO: " + tipo + "\n" +
-               "CAPACIDADE: " + capacidade + "\n" +
-               "LOCALIZAÇÃO: " + localizacao;
+        String resposta = super.toString();
+        resposta += '\n';
+        resposta += "Numero da Sala :" + sala + '\n';
+        resposta += "Tipo de Sala : " + tipo + '\n';
+        resposta += "Quais São os Equipamentos : " + equipamentos + '\n';
+
+        return resposta;
     }
 }
