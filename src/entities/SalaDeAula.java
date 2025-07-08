@@ -23,4 +23,12 @@ public class SalaDeAula extends EspacoFisico{
 		resposta += "Quais são os equipamentos: " + equipamentos + '\n';
 		return resposta;
 	}
+
+
+    public String getIdentificador() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getIdentificador'");
+    }
 }
+//    public String getIdentificador() {
+//        return identificador;	

@@ -3,17 +3,19 @@ package Cadastros.CadastroEspacoFisico;
 import java.util.ArrayList;
 import java.util.List;
 
+import Cadastros.SalaDeEstudo;
+
 public class CadastroSalaDeEstudos {
 
     int nSalas;
-    private List<SalaDeEstudos> salas;
+    private List<SalaDeEstudo> salas;
 
     public CadastroSalaDeEstudos() {
         nSalas = 0;
         salas = new ArrayList<SalaDeEstudos>();
     }
 
-    public int cadastrarSala(SalaDeEstudos pos) {
+    public int cadastrarSala(SalaDeEstudo pos) {
         boolean cadastrou = salas.add(pos);
         if (cadastrou) {
             nSalas = salas.size();
@@ -21,8 +23,8 @@ public class CadastroSalaDeEstudos {
         return nSalas;
     }
 
-    public SalaDeEstudos pesquisarSala(String nomeSala) {
-        for (SalaDeEstudos pos : salas) {
+    public SalaDeEstudo pesquisarSala(String nomeSala) {
+        for (SalaDeEstudo pos : salas) {
             
             if (pos.getNome().equalsIgnoreCase(nomeSala)) {
                 return pos;
@@ -31,7 +33,7 @@ public class CadastroSalaDeEstudos {
         return null;
     }
 
-    public boolean removerSala(SalaDeEstudos pos) {
+    public boolean removerSala(SalaDeEstudo pos) {
         boolean removeu = false;
         if (salas.contains(pos)) {
             removeu = salas.remove(pos);
@@ -39,9 +41,9 @@ public class CadastroSalaDeEstudos {
         return removeu;
     }
 
-    public boolean atualizarSala(String nomeSala, SalaDeEstudos pos) {
+    public boolean atualizarSala(String nomeSala, SalaDeEstudo pos) {
         boolean resposta = false;
-        SalaDeEstudos remover = pesquisarSala(nomeSala);
+        SalaDeEstudo remover = pesquisarSala(nomeSala);
         if (remover != null) {
             salas.remove(remover);
             resposta = salas.add(pos);
