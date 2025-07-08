@@ -1,5 +1,8 @@
 package Front;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.swing.JOptionPane;
 import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
 import entities.EspacoFisico;
@@ -25,10 +28,17 @@ public class MenuEspaçoFisico {
          return JOptionPane.showInputDialog("Informe a localização da sala: ");
 
     }
-	private static String lerEquipamentos(){
-        return JOptionPane.showInputDialog("Informe os equipamentos da sala: ");
-
-    }
+	 private static List<String> lerEquipamentos() {
+	        List<String> equipamentos = new ArrayList<>();
+	        String equipamento;
+	        do {
+	            equipamento = JOptionPane.showInputDialog("Informe um equipamento (ou deixe em branco para finalizar): ");
+	            if (equipamento != null && !equipamento.trim().isEmpty()) {
+	                equipamentos.add(equipamento.trim());
+	            }
+	        } while (equipamento != null && !equipamento.trim().isEmpty());
+	        return equipamentos;
+	    }
 		
 	 
 	 
@@ -37,7 +47,7 @@ public class MenuEspaçoFisico {
 	        String tipo = lerTipo();
 	        String capacidade = lerCapacidade();
 	        String localizacao = lerLocalizacao();
-	        String equipamentos = lerEquipamentos();
+	        List<String> equipamentos = lerEquipamentos();
 	     
 	        return new EspacoFisico( sala, tipo,  capacidade, localizacao, equipamentos);
 	    }
@@ -122,23 +132,10 @@ public class MenuEspaçoFisico {
         }
     } while (escolha != 0);
 	}
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 413a96ce728f13497f0079d2acf6c8d559af4d96
 		@Override
 		public String toString() {
 			return "MenuEspaçoFisico []";
 		}
-
-		
-	    
-	
-<<<<<<< HEAD
-=======
-
->>>>>>> 413a96ce728f13497f0079d2acf6c8d559af4d96
 
 	public static void menuAgendamento(CadastroEspacoFisico cadEspacoFisico) {
     String texto = "=== Agendamento de Sala === \n"

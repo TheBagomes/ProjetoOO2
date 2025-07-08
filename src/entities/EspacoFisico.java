@@ -13,7 +13,7 @@ public class EspacoFisico {
     public List<Equipamentos> equipamentos;  // Agora é uma lista de objetos!
 
     // Construtor
-    public EspacoFisico(String sala, String tipo, String capacidade, String localizacao, String equipamentos) {
+    public EspacoFisico(String sala, String tipo, String capacidade, String localizacao, List<String> equipamentos2) {
         this.sala = sala;
         this.tipo = tipo;
         this.capacidade = capacidade;
