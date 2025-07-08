@@ -5,11 +5,11 @@ import java.util.List;
 import Cadastros.CadastroEspacoFisico.Equipamentos;
 
 public class EspacoFisico {  // Classe abstrata (não pode ser instanciada diretamente)
-    private String nome;
-    private String tipo;
-    private String capacidade;
-    private String localizacao;
-    private List<Equipamentos> equipamentos;  // Agora é uma lista de objetos!
+	public String nome;
+    public String tipo;
+    public String capacidade;
+    public String localizacao;
+    public List<Equipamentos> equipamentos;  // Agora é uma lista de objetos!
 
     // Construtor
     public EspacoFisico(String nome, String tipo, String capacidade, String localizacao, String equipamentos) {
