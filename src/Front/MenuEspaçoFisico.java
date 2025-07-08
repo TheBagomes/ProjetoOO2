@@ -123,7 +123,7 @@ public class MenuEspaçoFisico {
     } while (escolha != 0);
 	}
 
-<<<<<<< HEAD
+
 		@Override
 		public String toString() {
 			return "MenuEspaçoFisico []";
@@ -132,7 +132,7 @@ public class MenuEspaçoFisico {
 		
 	    
 	
-=======
+
 
 	public static void menuAgendamento(CadastroEspacoFisico cadEspacoFisico) {
     String texto = "=== Agendamento de Sala === \n"
