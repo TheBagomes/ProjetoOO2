@@ -40,13 +40,18 @@ public class CadastroEspacoFisico {
 			return resposta;
 		}
 		
-		public boolean removerEspacoFisico(EspacoFisico ok) {
+		public boolean removerEspacoFisico(EspacoFisico remover) {
 			boolean removeu = false;
-			if(espacos.contains(ok)) {
-				removeu = espacos.remove(ok);
+			if(espacos.contains(remover)) {
+				removeu = espacos.remove(remover);
 			}
 			return removeu;
 		}
+
+        public boolean agendarEspacoFisico(String sala, String data, String horario) {
+            // TODO Auto-generated method stub
+            throw new UnsupportedOperationException("Unimplemented method 'agendarEspacoFisico'");
+        }
 		
 }
 

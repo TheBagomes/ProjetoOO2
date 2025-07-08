@@ -92,9 +92,9 @@ public class MenuAluno {
 					System.gc();
 				}
 
-                case 5:  // NOVO CASO - ABRE O MENU DE ESPAÇO FÍSICO
-                    CadastroEspacoFisico cadEspacoFisico = new CadastroEspacoFisico(); // Você precisa passar a instância correta
-                    MenuEspaçoFisico.frontEspacoFisico(cadEspacoFisico);
+                case 5:  // Menu de Espaço Físico (restrito a agendamento)
+                    CadastroEspacoFisico cadEspacoFisico = new CadastroEspacoFisico(); // Ou injete a dependência
+                    MenuEspaçoFisico.menuAgendamento(cadEspacoFisico); // Chama apenas o menu de agendamento
                     break;
 
 			    default:
