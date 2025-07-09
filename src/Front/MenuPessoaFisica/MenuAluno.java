@@ -1,8 +1,9 @@
-package Front;
+package Front.MenuPessoaFisica;
 
 import javax.swing.JOptionPane;
 
 import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
+import Front.MenuEspacoFisico.MenuEspaçoFisico;
 import entities.Aluno;
 
 public class MenuAluno {

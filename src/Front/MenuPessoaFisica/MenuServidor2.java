@@ -1,7 +1,8 @@
-package Front;
+package Front.MenuPessoaFisica;
 
 import javax.swing.JOptionPane;
 
+import Front.MenuTipos;
 import entities.Servidor;
 
 public class MenuServidor2{

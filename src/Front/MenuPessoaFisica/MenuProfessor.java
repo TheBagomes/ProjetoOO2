@@ -1,10 +1,8 @@
-package Front;
+package Front.MenuPessoaFisica;
 
 import javax.swing.JOptionPane;
 
-//import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
-//import Cadastros.CadastoPessoaFisica.CadastroProfessor;
-
+import Front.MenuTipos;
 import entities.Professor;
 
 public class MenuProfessor {

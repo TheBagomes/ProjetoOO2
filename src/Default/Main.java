@@ -2,11 +2,17 @@ package Default;
 
 import javax.swing.JOptionPane;
 
+<<<<<<< HEAD
+import Front.MenuPessoaFisica.MenuAluno;
+import Front.MenuPessoaFisica.MenuProfessor;
+import Front.MenuPessoaFisica.MenuServidor2;
+=======
 import Front.MenuServidor2;
 import Front.MenuAluno;
 import Front.MenuEspacoFisico;
+>>>>>>> b2d17b9ce2d4fd098b38faf86e348448dd1f42c3
 import Front.MenuPadrao;
-import Front.MenuProfessor;
+import Front.MenuEspacoFisico.MenuEspaçoFisico;
 
 public class Main {
     static Cadastros.CadastoPessoaFisica.CadastroAluno cadAluno;
