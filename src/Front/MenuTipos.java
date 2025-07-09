@@ -2,15 +2,18 @@ package Front;
 
 import javax.swing.JOptionPane;
 import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
+import Cadastros.CadastroEspacoFisico.CadastroLaboratorio;
 import Cadastros.CadastroEspacoFisico.CadastroSalaDeAula;
+import Cadastros.CadastroEspacoFisico.CadastroSalaDeEstudos;
 import Front.MenuEspacoFisico.MenuEspacoFisico;
+import Front.MenuEspacoFisico.MenuLaboratorio;
 import Front.MenuEspacoFisico.MenuSalaDeAula;
 import Front.MenuEspacoFisico.MenuSalaDeEstudos;
 
-public class MenuTipos extends MenuEspacoFisico {
-    static Cadastros.CadastroEspacoFisico.CadastroEspacoFisico cadLaboratorio;
+public class MenuTipos extends MenuSalaDeAula {
+    static CadastroLaboratorio cadLaboratorio;
     static CadastroSalaDeAula cadSalaDeAula;
-	static Cadastros.CadastroEspacoFisico.CadastroEspacoFisico cadSalaDeEstudos;
+	static CadastroSalaDeEstudos cadSalaDeEstudos;
     static Cadastros.CadastroEspacoFisico.CadastroEspacoFisico cadAutidorio;
 
     public static void EscolherTipo(){
@@ -32,22 +35,15 @@ public class MenuTipos extends MenuEspacoFisico {
                 switch (escolha) {
                     case 1:
 
-                        MenuEspacoFisico.frontEspacoFisico(cadLaboratorio);
-                        break;
-                    
-                    case 2:
-                        MenuEspacoFisico.frontEspacoFisico(cadAutidorio);
-
                         MenuSalaDeAula.frontSalaDeAula(cadSalaDeAula);
                         break;
                     
                     case 2:
                         MenuSalaDeEstudos.frontSalaDeEstudo(cadSalaDeEstudos);
-
                         break;
 
-                    case 3:
-                        MenuEspacoFisico.frontEspacoFisico(cadEspacoFisico);
+                    case 3: 
+                        MenuLaboratorio.frontLaboratorio(cadLaboratorio);
                         break;
 
                     case 4:
@@ -72,7 +68,7 @@ public class MenuTipos extends MenuEspacoFisico {
     String texto = "=== Agendamento de Sala === \n"
             + "1 - Agendar sala\n"
             + "0 - Voltar";
-
+                                
     int escolha = -1;
     do {
         String strEscolha = JOptionPane.showInputDialog(texto);

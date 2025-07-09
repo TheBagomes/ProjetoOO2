@@ -3,7 +3,6 @@ package Front.MenuPessoaFisica;
 import javax.swing.JOptionPane;
 
 import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
-import Front.MenuTipos;
 import Front.MenuEspacoFisico.MenuEspacoFisico;
 import entities.Servidor;
 

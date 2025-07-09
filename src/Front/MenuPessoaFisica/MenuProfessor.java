@@ -97,7 +97,7 @@ public class MenuProfessor {
                 case 5:  // NOVO CASO - ABRE O MENU DE ESPAÇO FÍSICO
                 	CadastroEspacoFisico cadEspacoFisico = new CadastroEspacoFisico(); // Ou injete a dependência
                     MenuEspacoFisico.menuAgendamento(cadEspacoFisico); // Chama apenas o menu de agendamento
-                    break;
+                    break; 
 
 			    default:
 				    break;

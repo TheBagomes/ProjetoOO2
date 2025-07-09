@@ -51,5 +51,10 @@ public class CadastroLaboratorio {
     public List<Laboratorio> listarLaboratorios() {
         return new ArrayList<>(laboratorios);
     }
+
+    public boolean agendarSala(String sala, String data, String horario) {
+        
+        return false;
+    }
 }
 

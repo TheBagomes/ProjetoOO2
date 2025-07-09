@@ -1,14 +1,10 @@
 package Front.MenuEspacoFisico;
 
 import java.util.ArrayList;
-
 import java.util.List;
-
 import javax.swing.JOptionPane;
 
-import Cadastros.CadastroEspacoFisico.CadastroSalaDeAula;
 import Cadastros.CadastroEspacoFisico.CadastroSalaDeEstudos;
-
 import entities.SalaDeEstudo;
 
 
@@ -55,12 +51,12 @@ public class MenuSalaDeEstudos{
 	    }
 	    
 	    public static void frontSalaDeEstudo(CadastroSalaDeEstudos cadSalaDeEstudo) {
-    String texto = "=== Menu de Sala de aula === \n"
+            String texto = "=== Menu de Sala de aula === \n"
             + "1 - Cadastrar sala de estudos\n"
             + "2 - Pesquisar sala de estudos\n"
             + "3 - Atualizar sala de estudos\n"
-            + "4 - Agendar sala de estudos\n"      // NOVA OPÇÃO
-            + "5 - Remover sala de estudos\n"      // ANTIGO CASO 4 MOVIDO PARA AQUI
+            + "4 - Agendar sala de estudos\n"      
+            + "5 - Remover sala de estudos\n"      
             + "0 - Voltar";
 
     int escolha = -1;
@@ -142,8 +138,8 @@ public class MenuSalaDeEstudos{
 	}
 	
 
-	public static void menuAgendamento(CadastroSalaDeAula cadSalaDeEstudo) {
-    String texto = "=== Agendamento de Sala === \n"
+	public static void menuAgendamento(CadastroSalaDeEstudos cadSalaDeEstudo) {
+    String texto = "=== Agendamento de Sala De Estudos === \n"
             + "1 - Agendar sala\n"
             + "0 - Voltar";
 
