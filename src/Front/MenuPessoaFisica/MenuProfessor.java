@@ -104,6 +104,7 @@ public class MenuProfessor {
 					JOptionPane.showMessageDialog(null, "Professor removido do cadastro");
 					System.gc();
 				}
+				break;
 
                 case 5: 
                 	 while (true) {

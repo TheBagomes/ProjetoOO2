@@ -1,11 +1,15 @@
 package Front;
 
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import Cadastros.CadastroEspacoFisico.CadastroAgendamento;
+import Front.MenuPessoaFisica.MenuServidor2;
 import entities.Agendamento;
 import java.util.List;
 
 public class MenuAgendamento {
+	static ImageIcon icon = new ImageIcon(MenuAgendamento.class.getResource("/resources/iconeAgendar.png"));
+
 
     private static String lerSala() {
         return JOptionPane.showInputDialog("Nome da sala:");
@@ -35,7 +39,15 @@ public class MenuAgendamento {
 
         int escolha;
         do {
-            String strEscolha = JOptionPane.showInputDialog(texto);
+        	String strEscolha = (String) JOptionPane.showInputDialog(
+            		null,
+            		texto,
+            		"Menu Agendamento",
+    	            JOptionPane.QUESTION_MESSAGE,
+    	            icon,
+    	            null,
+    	            null
+            		);;
             if (strEscolha == null) break; // Se o usuário cancelar
 
             try {

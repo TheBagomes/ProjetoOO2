@@ -102,6 +102,7 @@ public class MenuAluno {
 					JOptionPane.showMessageDialog(null, "Aluno removido do cadastro");
 					System.gc();
 				}
+				break;
 
                 case 5:
                 	 while (true) {

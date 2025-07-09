@@ -106,7 +106,8 @@ public class MenuServidor2{
 					JOptionPane.showMessageDialog(null, "Servidor(a) removido do cadastro");
 					System.gc();
 				}
-                case 5:  // NOVO CASO - ABRE O MENU DE ESPAÇO FÍSICO
+				break;
+                case 5:
                 	 while (true) {
                          String opcao = JOptionPane.showInputDialog(
                              " Sistema de Agendamento de Salas\n\n" +
