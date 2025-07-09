@@ -3,18 +3,21 @@ package Front;
 import javax.swing.JOptionPane;
 
 import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
+import Cadastros.CadastroEspacoFisico.CadastroSalaDeAula;
+import Front.MenuEspacoFisico.MenuEspaçoFisico;
+import Front.MenuEspacoFisico.MenuSalaDeAula;
 
 public class MenuTipos extends MenuEspaçoFisico {
     static Cadastros.CadastroEspacoFisico.CadastroEspacoFisico cadLaboratorio;
-    static Cadastros.CadastroEspacoFisico.CadastroEspacoFisico cadSalaDeAula;
+    static CadastroSalaDeAula cadSalaDeAula;
 	static Cadastros.CadastroEspacoFisico.CadastroEspacoFisico cadSalaDeEstudos;
     static Cadastros.CadastroEspacoFisico.CadastroEspacoFisico cadAutidorio;
 
     public static void EscolherTipo(){
         String texto = "=== Menu de Espaço Fisico === \n"
             + "1 - Sala de Aula\n"
-            + "2 - Laboratorio\n"
-            + "3 - Sala de Estudos\n"
+            + "2 - Sala de Estudos\n"
+            + "3 - Laboratorio\n"
             + "4 - Autitorio \n"
             + "0 - Voltar para menu anterior";
 
@@ -28,11 +31,11 @@ public class MenuTipos extends MenuEspaçoFisico {
 
                 switch (escolha) {
                     case 1:
-                        MenuEspaçoFisico.frontEspacoFisico(cadLaboratorio);
+                        MenuSalaDeAula.frontSalaDeAula(cadSalaDeAula);
                         break;
                     
                     case 2:
-                        MenuEspaçoFisico.frontEspacoFisico(cadAutidorio);
+                        Menu.frontSalaDeEstudos(cadSalaDeEstudos);
                         break;
 
                     case 3:

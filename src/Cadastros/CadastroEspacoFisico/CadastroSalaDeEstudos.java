@@ -16,7 +16,7 @@ public class CadastroSalaDeEstudos {
         salas = new ArrayList<SalaDeEstudo>();
     }
 
-    public int cadastrarSala(SalaDeEstudo pos) {
+    public int cadastrarSalaDeEstudos(SalaDeEstudo pos) {
         boolean cadastrou = salas.add(pos);
         if (cadastrou) {
             nSalas = salas.size();

@@ -1,6 +1,5 @@
 package Cadastros.CadastroEspacoFisico;
 import entities.SalaDeAula;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,22 +26,21 @@ public class CadastroSalaDeAula {
         if (sala.getIdentificador().equalsIgnoreCase(identificadorSala)) {      
             return sala;
         }               
-        throw new UnsupportedOperationException("Unimplemented method 'pesquisarSala'");
     }
     return null;
 
 }
 
-    public int cadastrarSala(SalaDeAula sala) {
-        boolean cadastrou = salas.add(sala);
+    public int cadastrarSalaDeAula(SalaDeAula novoSalaDeAula) {
+        boolean cadastrou = salas.add(novoSalaDeAula);
         if (cadastrou) {
             return salas.size();
         }
         return -1; // Retorna -1 se não conseguiu cadastrar
     }
 
-    public boolean removerSala(SalaDeAula sala) {
-        return salas.remove(sala);
+    public boolean removerSala(SalaDeAula remover) {
+        return salas.remove(remover);
     }
 
     public SalaDeAula pesquisarSalaPorNome(String nomeSala) {
@@ -55,11 +53,11 @@ public class CadastroSalaDeAula {
     }
 
 
-    public boolean atualizarSala(String nomeSala, SalaDeAula salaAtualizada) {
+    public boolean atualizarSala(String nomeSala, SalaDeAula atualizado) {
         SalaDeAula salaExistente = pesquisarSalaPorNome(nomeSala);
         if (salaExistente != null) {
             salas.remove(salaExistente);
-            return salas.add(salaAtualizada);
+            return salas.add(atualizado);
         }
         return false; // Retorna false se não conseguiu atualizar
     }
@@ -68,7 +66,5 @@ public class CadastroSalaDeAula {
 	
 		return false;
 	}
-
-
 }       
 
