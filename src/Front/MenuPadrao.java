@@ -17,7 +17,7 @@ public class MenuPadrao {
 		String strOpcao = (String) JOptionPane.showInputDialog(
         		null,
         		opcoes,
-        		"Menu Aluno",
+        		"Menu",
 	            JOptionPane.QUESTION_MESSAGE,
 	            icon,
 	            null,
