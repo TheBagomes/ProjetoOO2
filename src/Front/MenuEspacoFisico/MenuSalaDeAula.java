@@ -11,7 +11,7 @@ import entities.SalaDeAula;
 
 
 public class MenuSalaDeAula{
-     private static String lerSala(){
+     protected static String lerSala(){
          return JOptionPane.showInputDialog("Informe o nome da sala: ");
 
     }

@@ -1,5 +1,6 @@
 package Front.MenuPessoaFisica;
 
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 import Cadastros.CadastroEspacoFisico.CadastroAgendamento;
@@ -7,6 +8,9 @@ import entities.Agendamento;
 import entities.Professor;
 
 public class MenuProfessor {
+	static ImageIcon icon = new ImageIcon(MenuProfessor.class.getResource("/resources/iconeProfessor.png"));
+
+	
     private static String lerNome() {
 		return JOptionPane.showInputDialog("Informe o nome do(a) professor(a): ");
 	}
@@ -52,13 +56,21 @@ public class MenuProfessor {
                     + "2 - Pesquisar professor\n"
                     + "3 - Atualizar professor\n"
                     + "4 - Remover professor\n"
-                    + "5 - Gerenciar Espaços Físicos\n"  // NOVA OPÇÃO
+                    + "5 - Agendar Espaços Físicos\n"  // NOVA OPÇÃO
                     + "0 - Voltar para menu anterior";
 
         
         int escolha = -1;
         do{
-            String strEscolha = JOptionPane.showInputDialog(texto);
+        	String strEscolha = (String) JOptionPane.showInputDialog(
+            		null,
+            		texto,
+            		"Menu Professor",
+    	            JOptionPane.QUESTION_MESSAGE,
+    	            icon,
+    	            null,
+    	            null
+            		);
             escolha = Integer.parseInt(strEscolha);
 
             switch (escolha){
@@ -99,10 +111,10 @@ public class MenuProfessor {
                              " Sistema de Agendamento de Salas\n\n" +
                              "1. Novo Agendamento\n" +
                              "2. Listar Agendamentos\n" +
-                             "3. Sair\n\n" +
+                             "0. Sair\n\n" +
                              "Digite sua opção:");
 
-                         if (opcao == null || opcao.equals("3")) break;
+                         if (opcao == null || opcao.equals("0")) break;
 
                          switch (opcao) {
                              case "1":

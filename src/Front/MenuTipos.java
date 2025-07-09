@@ -14,7 +14,7 @@ public class MenuTipos extends MenuSalaDeAula {
     static CadastroLaboratorio cadLaboratorio;
     static CadastroSalaDeAula cadSalaDeAula;
 	static CadastroSalaDeEstudos cadSalaDeEstudos;
-    static Cadastros.CadastroEspacoFisico.CadastroEspacoFisico cadAutidorio;
+    static Cadastros.CadastroEspacoFisico.CadastroEspacoFisico cadEspacoFisico;
 
     public static void EscolherTipo(){
         String texto = "=== Menu de Espaço Fisico === \n"
@@ -47,7 +47,7 @@ public class MenuTipos extends MenuSalaDeAula {
                         break;
 
                     case 4:
-                        MenuEspacoFisico.frontEspacoFisico(cadSalaDeEstudos);
+                        MenuEspacoFisico.frontEspacoFisico(cadEspacoFisico);
                         break;
                        default:
                             JOptionPane.showMessageDialog(null, "Opcao inválida");

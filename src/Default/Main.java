@@ -36,7 +36,11 @@ public class Main {
 				case 4: 
 					MenuEspacoFisico.frontEspacoFisico(cadEspacoFisico);
 				break;
-				case 0: 
+				case 5:
+					JOptionPane.showMessageDialog(null, "Função a ser implementada");
+				break;
+				case 0:
+					JOptionPane.showMessageDialog(null, "Sistema encerrado.");
 				break;
 				default: 
 					JOptionPane.showMessageDialog(null, "Opcao inválida");

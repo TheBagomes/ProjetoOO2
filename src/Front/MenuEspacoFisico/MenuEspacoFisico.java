@@ -4,14 +4,18 @@ import java.util.ArrayList;
 
 import java.util.List;
 
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 import Cadastros.CadastroEspacoFisico.CadastroAgendamento;
 import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
+import Front.MenuPessoaFisica.MenuServidor2;
 import entities.Agendamento;
 import entities.EspacoFisico;
 
 public class MenuEspacoFisico {
+	static ImageIcon icon = new ImageIcon(MenuEspacoFisico.class.getResource("/resources/iconEspacoFisico.png"));
+
 
 	 protected static String lerSala(){
          return JOptionPane.showInputDialog("Informe o nome da sala: ");
@@ -71,7 +75,15 @@ public class MenuEspacoFisico {
 
     int escolha = -1;
     do {
-        String strEscolha = JOptionPane.showInputDialog(texto);
+    	String strEscolha = (String) JOptionPane.showInputDialog(
+        		null,
+        		texto,
+        		"Menu de Espaços Físicos",
+	            JOptionPane.QUESTION_MESSAGE,
+	            icon,
+	            null,
+	            null
+        		);
         escolha = Integer.parseInt(strEscolha);
         
         switch (escolha) {
@@ -110,7 +122,7 @@ public class MenuEspacoFisico {
                              "0 - Sair\n" +
                              "Digite sua opção:");
 
-                         if (opcao == null || opcao.equals("3")) break;
+                         if (opcao == null || opcao.equals("0")) break;
 
                          switch (opcao) {
                              case "1":

@@ -1,5 +1,6 @@
 package Front.MenuPessoaFisica;
 
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 import Cadastros.CadastroEspacoFisico.CadastroAgendamento;
@@ -7,6 +8,7 @@ import entities.Agendamento;
 import entities.Servidor;
 
 public class MenuServidor2{
+	static ImageIcon icon = new ImageIcon(MenuServidor2.class.getResource("/resources/iconeServidor.png"));
 
     private static String lerNome(){
          return JOptionPane.showInputDialog("Informe o nome do(a) servidor(a): ");
@@ -56,12 +58,21 @@ public class MenuServidor2{
                     + "2 - Pesquisar Servidor\n"
                     + "3 - Atualizar Servidor\n"
                     + "4 - Remover Servidor\n"
-                    + "5 - Gerenciar Espaços Físicos\n"  // NOVA OPÇÃO
+                    + "5 - Agendar Espaços Físicos\n"  // NOVA OPÇÃO
                     + "0 - Voltar para menu anterior";
         
         int escolha = -1;
         do{
-            String strEscolha = JOptionPane.showInputDialog(texto);
+        	String strEscolha = (String) JOptionPane.showInputDialog(
+            		null,
+            		texto,
+            		"Menu Servidor",
+    	            JOptionPane.QUESTION_MESSAGE,
+    	            icon,
+    	            null,
+    	            null
+            		);
+
             escolha = Integer.parseInt(strEscolha);
 
             switch (escolha){
@@ -101,10 +112,10 @@ public class MenuServidor2{
                              " Sistema de Agendamento de Salas\n\n" +
                              "1. Novo Agendamento\n" +
                              "2. Listar Agendamentos\n" +
-                             "3. Sair\n\n" +
+                             "0. Sair\n\n" +
                              "Digite sua opção:");
 
-                         if (opcao == null || opcao.equals("3")) break;
+                         if (opcao == null || opcao.equals("0")) break;
 
                          switch (opcao) {
                              case "1":
