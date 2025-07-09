@@ -16,7 +16,7 @@ public class CadastroSalaDeAula {
     }
 
     // Método para adicionar equipamento à sala
-    public boolean adicionarEquipamento(String identificadorSala, Equipamentos equipamento) {
+    public boolean adicionarEquipamento(String identificadorSala, String equipamento) {
         SalaDeAula sala = pesquisarSala(identificadorSala);
         if (sala != null) {
             return sala.getEquipamentos().add(equipamento); // Assume que SalaDeAula tem uma lista de equipamentos

@@ -1,7 +1,6 @@
 package Default;
 
 import javax.swing.JOptionPane;
-
 import Front.MenuPadrao;
 import Front.MenuEspacoFisico.MenuEspacoFisico;
 import Front.MenuPessoaFisica.MenuAluno;

@@ -75,7 +75,7 @@ public class MenuSalaDeAula{
             switch (escolha) {
                 case 1:
 	                	SalaDeAula novoSalaDeAula = dadosNovoSalaDeAula();
-	                    cadSalaDeAula.cadastrarSalaDeAula((novoSalaDeAula));
+	                    cadSalaDeAula.cadastrarSala((novoSalaDeAula));
 	                    break;
 
                 case 2:

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import java.util.List;
 
+import entities.SalaDeAula;
 import entities.SalaDeEstudo;
 
 public class CadastroSalaDeEstudos {
@@ -51,4 +52,18 @@ public class CadastroSalaDeEstudos {
         }
         return resposta;
     }
+    
+    public SalaDeEstudo pesquisarSalaPorNome(String nomeSala) {
+        for (SalaDeEstudo sala : salas) {
+            if (sala.getSala().equalsIgnoreCase(nomeSala)) {
+                return sala;
+            }
+        }
+        return null; // Retorna null se não encontrar
+    }
+    
+    public boolean agendarSala(String sala, String data, String horario) {
+    	
+		return false;
+	}
 }

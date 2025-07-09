@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.swing.JOptionPane;
 
+import Cadastros.CadastroEspacoFisico.CadastroSalaDeAula;
 import Cadastros.CadastroEspacoFisico.CadastroSalaDeEstudos;
 
 import entities.SalaDeEstudo;
@@ -53,7 +54,7 @@ public class MenuSalaDeEstudos{
 	        return new SalaDeEstudo( sala, tipo,  capacidade, localizacao, equipamentos);
 	    }
 	    
-	    public static void frontSalaDeAula(CadastroSalaDeEstudos cadSalaDeEstudo) {
+	    public static void frontSalaDeEstudo(CadastroSalaDeEstudos cadSalaDeEstudo) {
     String texto = "=== Menu de Sala de aula === \n"
             + "1 - Cadastrar sala de estudos\n"
             + "2 - Pesquisar sala de estudos\n"
@@ -136,12 +137,9 @@ public class MenuSalaDeEstudos{
 	}
 
 		@Override
-		public String toString() {
-			return "MenuEspaçoFisico []";
-		}
-
-		
-	    
+	public String toString() {
+		return "MenuEspaçoFisico []";
+	}
 	
 
 	public static void menuAgendamento(CadastroSalaDeAula cadSalaDeEstudo) {

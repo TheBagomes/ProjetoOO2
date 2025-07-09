@@ -1,10 +1,11 @@
 package Front;
 
 import javax.swing.JOptionPane;
-
 import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
 import Cadastros.CadastroEspacoFisico.CadastroSalaDeAula;
 import Front.MenuEspacoFisico.MenuEspacoFisico;
+import Front.MenuEspacoFisico.MenuSalaDeAula;
+import Front.MenuEspacoFisico.MenuSalaDeEstudos;
 
 public class MenuTipos extends MenuEspacoFisico {
     static Cadastros.CadastroEspacoFisico.CadastroEspacoFisico cadLaboratorio;
@@ -41,12 +42,12 @@ public class MenuTipos extends MenuEspacoFisico {
                         break;
                     
                     case 2:
-                        Menu.frontSalaDeEstudos(cadSalaDeEstudos);
+                        MenuSalaDeEstudos.frontSalaDeEstudo(cadSalaDeEstudos);
 
                         break;
 
                     case 3:
-                        MenuEspacoFisico.frontEspacoFisico(cadSalaDeAula);
+                        MenuEspacoFisico.frontEspacoFisico(cadEspacoFisico);
                         break;
 
                     case 4:
