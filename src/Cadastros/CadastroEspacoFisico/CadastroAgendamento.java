@@ -21,7 +21,7 @@ public class CadastroAgendamento {
             // Verifica horário comercial (8h-18h)
             if (!isHorarioValido(horarioInicio, horarioFim)) {
                 JOptionPane.showMessageDialog(null, 
-                    "❌ Horário fora do período comercial (8h-18h)!", 
+                    " Horário fora do período comercial (8h-18h)!", 
                     "Erro", JOptionPane.ERROR_MESSAGE);
                 return false;
             }
