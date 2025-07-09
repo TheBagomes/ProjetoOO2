@@ -2,7 +2,7 @@ package Default;
 
 import javax.swing.JOptionPane;
 import Front.MenuPadrao;
-import Front.MenuTipos;
+import Front.MenuEspacoFisico.MenuEspacoFisico;
 import Front.MenuPessoaFisica.MenuAluno;
 import Front.MenuPessoaFisica.MenuProfessor;
 import Front.MenuPessoaFisica.MenuServidor2;
@@ -26,18 +26,18 @@ public class Main {
 			switch (escolha) {
 				case 1: 
 					MenuAluno.frontAluno(cadAluno); 
-					break;
+				break;
 				case 2: 
                     MenuProfessor.frontProfessor(cadProfessor);
-					break;
+				break;
 				case 3: 
 					MenuServidor2.frontServidor(cadServidor);
-					break;
+				break;
 				case 4: 
-					MenuTipos.EscolherTipo(tipoe);
-					break;
+					MenuEspacoFisico.frontEspacoFisico(cadEspacoFisico);
+				break;
 				case 0: 
-					break;
+				break;
 				default: 
 					JOptionPane.showMessageDialog(null, "Opcao inválida");
 					escolha = -1;
