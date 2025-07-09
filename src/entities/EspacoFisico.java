@@ -4,12 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import Cadastros.CadastroEspacoFisico.Equipamentos;
 
-public class EspacoFisico { 
-	public String sala;
+
+public class EspacoFisico {
+    public String sala;
     public String tipo;
     public String capacidade;
     public String localizacao;
-    public List<Equipamentos> equipamentos;  // Agora é uma lista de objetos!
+    public List<String> equipamentos;
 
     // Construtor
     public EspacoFisico(String sala, String tipo, String capacidade, String localizacao, List<String> equipamentos) {
@@ -17,7 +18,7 @@ public class EspacoFisico {
         this.tipo = tipo;
         this.capacidade = capacidade;
         this.localizacao = localizacao;
-        this.equipamentos = new ArrayList<>();  
+        this.equipamentos = equipamentos;
     }
 
     // Getters e Setters
@@ -26,23 +27,23 @@ public class EspacoFisico {
 		return sala;
 	}
 
-	public String getTipo() {
-		return tipo;
-	}
+    public List<String> getEquipamentos1() {
+        return equipamentos;
+    }
 
-	public String getCapacidade() {
-		return capacidade;
-	}
+    public void adicionarEquipamento(String equipamento) {
+        this.equipamentos.add(equipamento);
+    }
 
 	public String getLocalizacao() {
 		return localizacao;
 	}
 
-	public List<Equipamentos> getEquipamentos() {
+	public List<String> getEquipamentos() {
 		return equipamentos;
 	}
 	
-	  public void adicionarEquipamento(Equipamentos equipamento) {
+	  public void adicionarEquipamento1(String equipamento) {
 	        this.equipamentos.add(equipamento);
 	    }
 

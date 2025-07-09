@@ -13,6 +13,16 @@ public class CadastroEspacoFisico {
         espacos = new ArrayList<>();
 		//equipamentosGeral = new ArrayList<>();
     }
+    
+	public int CadastroEspacoFisico(EspacoFisico pos) {
+		boolean cadastrou = espacos.add(pos);
+        if(cadastrou){
+            nEspacoFisico = espacos.size();
+        }
+        return nEspacoFisico;
+	}
+
+
 
 	public int cadastroEspacoFisico(EspacoFisico ok){
 	        boolean cadastrou = espacos.add(ok);
@@ -41,19 +51,16 @@ public class CadastroEspacoFisico {
 			}
 			return resposta;
 	}
-		
-		public boolean removerEspacoFisico(EspacoFisico remover) {
-
-			boolean removeu = false;
+	
+	public boolean removerEspacoFisico(EspacoFisico remover) {
+		boolean removeu = false;
 			if(espacos.contains(remover)) {
 				removeu = espacos.remove(remover);
 			}
 			return removeu;
 	}
-		
-		
-        public boolean agendarEspacoFisico(String sala, String data, String horario) {
-            // TODO Auto-generated method stub
+
+    public boolean agendarEspacoFisico(String sala, String data, String horario) {
             throw new UnsupportedOperationException("Unimplemented method 'agendarEspacoFisico'");
         }
 		
