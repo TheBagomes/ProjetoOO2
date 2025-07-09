@@ -1,13 +1,14 @@
 package Front.MenuEspacoFisico;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import javax.swing.JOptionPane;
 import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
 import entities.EspacoFisico;
 
-public class MenuEspacoFisico {
+public class MenuEspaçoFisico {
 
 	 protected static String lerSala(){
          return JOptionPane.showInputDialog("Informe o nome da sala: ");

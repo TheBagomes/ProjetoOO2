@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;
 
 import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
 import Cadastros.CadastroEspacoFisico.CadastroSalaDeAula;
+import Front.MenuEspacoFisico.MenuEspacoFisico;
 
 public class MenuTipos extends MenuEspacoFisico {
     static Cadastros.CadastroEspacoFisico.CadastroEspacoFisico cadLaboratorio;
