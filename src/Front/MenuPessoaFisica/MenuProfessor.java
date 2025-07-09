@@ -109,9 +109,10 @@ public class MenuProfessor {
                                 String sala = JOptionPane.showInputDialog("Nome da Sala:");
                                 String data = JOptionPane.showInputDialog("Data (DD/MM/AAAA):");
                                 String horario = JOptionPane.showInputDialog("Horário (HH:MM):");
-                                String usuario = JOptionPane.showInputDialog("Matrícula/Nome :");
+                                String horarioFim = JOptionPane.showInputDialog("Horário fim (HH:MM):");
+                                String usuario = JOptionPane.showInputDialog("Matrícula/Nome:");
                                 
-                                boolean sucesso = CadastroAgendamento.adicionarAgendamento(sala, data, horario, usuario);
+                                boolean sucesso = CadastroAgendamento.adicionarAgendamento(sala, data, horario, horarioFim, usuario);
                                 if (sucesso) {
                                     JOptionPane.showMessageDialog(null, "Agendamento realizado com sucesso!");
                                 }

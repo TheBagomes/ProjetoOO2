@@ -18,9 +18,13 @@ public class MenuAgendamento {
     private static String lerHorario() {
         return JOptionPane.showInputDialog("Horário (HH:MM):");
     }
+    
+    private static String lerHorarioFim() {
+        return JOptionPane.showInputDialog("Horário final (HH:MM):");
+    }
 
     private static String lerUsuario() {
-        return JOptionPane.showInputDialog("Matrícula/Nome do responsável:");
+        return JOptionPane.showInputDialog("Matrícula/Nome:");
     }
 
     public static void mostrarMenu() {
@@ -42,9 +46,10 @@ public class MenuAgendamento {
                         String sala = lerSala();
                         String data = lerData();
                         String horario = lerHorario();
+                        String horarioFim = lerHorarioFim();
                         String usuario = lerUsuario();
 
-                        boolean sucesso = CadastroAgendamento.adicionarAgendamento(sala, data, horario, usuario);
+                        boolean sucesso = CadastroAgendamento.adicionarAgendamento(sala, data, horario, horarioFim, usuario);
                         JOptionPane.showMessageDialog(null, sucesso ? "Agendamento salvo!" : "Erro ao salvar.");
                         break;
 

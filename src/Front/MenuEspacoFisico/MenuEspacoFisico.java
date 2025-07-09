@@ -118,8 +118,9 @@ public class MenuEspacoFisico {
                                  String data = JOptionPane.showInputDialog("Data (DD/MM/AAAA):");
                                  String horario = JOptionPane.showInputDialog("Horário (HH:MM):");
                                  String usuario = JOptionPane.showInputDialog("Matrícula/Nome do Responsável:");
+                                 String fim = JOptionPane.showInputDialog("Matrícula/Nome do Responsável:");
                                  
-                                 boolean sucesso = CadastroAgendamento.adicionarAgendamento(sala1, data, horario, usuario);
+                                 boolean sucesso = CadastroAgendamento.adicionarAgendamento(sala1, data, horario, usuario, fim);
                                  if (sucesso) {
                                      JOptionPane.showMessageDialog(null, "Agendamento realizado com sucesso!");
                                  }
