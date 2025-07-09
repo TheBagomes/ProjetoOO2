@@ -15,13 +15,27 @@ public class Agendamento {
     }
 
     // Getters (para visualização)
-    public String getSala() { return sala; }
-    public String getData() { return data; }
-    public String getHorario() { return horario; }
-    public String getUsuario() { return usuario; }
+    public String getSala() {
+    	return sala;
+    	}
+    
+    public String getData() { 
+    	return data;
+    	}
+    
+    public String getHorario() {
+    	return horario;
+    	}
+    
+    public String getUsuario() { 
+    	return usuario;
+    	}
 
     @Override
     public String toString() {
         return "Sala: " + sala + " | Data: " + data + " | Horário: " + horario + " | Responsável: " + usuario;
     }
+    
+    
+    
 }

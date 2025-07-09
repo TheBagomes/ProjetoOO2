@@ -2,9 +2,8 @@ package Front.MenuPessoaFisica;
 
 import javax.swing.JOptionPane;
 
-import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
-import Front.MenuTipos;
-import Front.MenuEspacoFisico.MenuEspacoFisico;
+import Cadastros.CadastroEspacoFisico.CadastroAgendamento;
+import entities.Agendamento;
 import entities.Professor;
 
 public class MenuProfessor {
@@ -95,8 +94,41 @@ public class MenuProfessor {
 				}
 
                 case 5:  // NOVO CASO - ABRE O MENU DE ESPAÇO FÍSICO
-                	CadastroEspacoFisico cadEspacoFisico = new CadastroEspacoFisico(); // Ou injete a dependência
-                    MenuEspacoFisico.menuAgendamento(cadEspacoFisico); // Chama apenas o menu de agendamento
+                	while (true) {
+                        String opcao = JOptionPane.showInputDialog(
+                            "Sistema de Agendamento\n" +
+                            "1. Novo Agendamento\n" +
+                            "2 - Listar Agendamentos\n" +
+                            "0 - Sair\n" +
+                            "Digite sua opção:");
+
+                        if (opcao == null || opcao.equals("3")) break;
+
+                        switch (opcao) {
+                            case "1":
+                                String sala = JOptionPane.showInputDialog("Nome da Sala:");
+                                String data = JOptionPane.showInputDialog("Data (DD/MM/AAAA):");
+                                String horario = JOptionPane.showInputDialog("Horário (HH:MM):");
+                                String usuario = JOptionPane.showInputDialog("Matrícula/Nome :");
+                                
+                                boolean sucesso = CadastroAgendamento.adicionarAgendamento(sala, data, horario, usuario);
+                                if (sucesso) {
+                                    JOptionPane.showMessageDialog(null, "Agendamento realizado com sucesso!");
+                                }
+                                break;
+                                
+                            case "2":
+                                StringBuilder lista = new StringBuilder("--- Agendamentos ---\n");
+                                for (Agendamento ag : CadastroAgendamento.listarAgendamentos()) {
+                                    lista.append(ag.toString()).append("\n");
+                                }
+                                JOptionPane.showMessageDialog(null, lista.toString());
+                                break;
+                                
+                            default:
+                                JOptionPane.showMessageDialog(null, "Opção inválida!");
+                        }
+                    }
                     break; 
 
 			    default:
