@@ -11,6 +11,7 @@ public class MenuPadrao {
 				      + "2 - Abrir Menu de Professores \n"
 				      + "3 - Abrir Menu de Servidores \n"
 				      + "4 - Abrir Menu  de Espaço Fisíco \n"
+				      + "5 - Emitir Relatorío de Utilização \n"
 				      + "0 - Sair";
 	
 		String strOpcao = (String) JOptionPane.showInputDialog(
