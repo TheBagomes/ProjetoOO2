@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 
 import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
 
-public class MenuTipos extends MenuEspaçoFisico {
+public class MenuTipos extends MenuEspacoFisico {
     static Cadastros.CadastroEspacoFisico.CadastroEspacoFisico cadLaboratorio;
     static Cadastros.CadastroEspacoFisico.CadastroEspacoFisico cadSalaDeAula;
 	static Cadastros.CadastroEspacoFisico.CadastroEspacoFisico cadSalaDeEstudos;
@@ -28,19 +28,19 @@ public class MenuTipos extends MenuEspaçoFisico {
 
                 switch (escolha) {
                     case 1:
-                        MenuEspaçoFisico.frontEspacoFisico(cadLaboratorio);
+                        MenuEspacoFisico.frontEspacoFisico(cadLaboratorio);
                         break;
                     
                     case 2:
-                        MenuEspaçoFisico.frontEspacoFisico(cadAutidorio);
+                        MenuEspacoFisico.frontEspacoFisico(cadAutidorio);
                         break;
 
                     case 3:
-                        MenuEspaçoFisico.frontEspacoFisico(cadSalaDeAula);
+                        MenuEspacoFisico.frontEspacoFisico(cadSalaDeAula);
                         break;
 
                     case 4:
-                        MenuEspaçoFisico.frontEspacoFisico(cadSalaDeEstudos);
+                        MenuEspacoFisico.frontEspacoFisico(cadSalaDeEstudos);
                         break;
                        default:
                             JOptionPane.showMessageDialog(null, "Opcao inválida");

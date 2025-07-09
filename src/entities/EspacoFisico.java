@@ -1,9 +1,6 @@
 package entities;
 
-import java.util.ArrayList;
 import java.util.List;
-import Cadastros.CadastroEspacoFisico.Equipamentos;
-
 
 public class EspacoFisico {
     public String sala;
@@ -25,6 +22,11 @@ public class EspacoFisico {
 
     public String getSala() {
 		return sala;
+	}
+    
+    public String getTipo() {
+		
+		return tipo;
 	}
 
     public List<String> getEquipamentos1() {
@@ -57,4 +59,6 @@ public class EspacoFisico {
 
         return resposta;
     }
+
+	
 }

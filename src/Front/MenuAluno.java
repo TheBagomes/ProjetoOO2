@@ -94,7 +94,7 @@ public class MenuAluno {
 
                 case 5:  // Menu de Espaço Físico (restrito a agendamento)
                     CadastroEspacoFisico cadEspacoFisico = new CadastroEspacoFisico(); // Ou injete a dependência
-                    MenuEspaçoFisico.menuAgendamento(cadEspacoFisico); // Chama apenas o menu de agendamento
+                    MenuEspacoFisico.menuAgendamento(cadEspacoFisico); // Chama apenas o menu de agendamento
                     break;
 
 			    default:

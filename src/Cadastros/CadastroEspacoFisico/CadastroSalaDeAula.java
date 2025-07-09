@@ -1,8 +1,10 @@
 package Cadastros.CadastroEspacoFisico;
-import entities.SalaDeAula;
 
+import entities.SalaDeAula;
+import entities.SalaDeEstudo;
 import java.util.ArrayList;
 import java.util.List;
+import Cadastros.CadastroEspacoFisico.Equipamentos;
 
 public class CadastroSalaDeAula {
     private List<SalaDeAula> salas;

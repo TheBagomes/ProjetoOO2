@@ -1,6 +1,7 @@
 package Cadastros.CadastroEspacoFisico;
 
 import java.util.ArrayList;
+
 import java.util.List;
 import entities.EspacoFisico;
 
@@ -14,17 +15,15 @@ public class CadastroEspacoFisico {
 		//equipamentosGeral = new ArrayList<>();
     }
     
-	public int CadastroEspacoFisico(EspacoFisico pos) {
-		boolean cadastrou = espacos.add(pos);
+	public int cadastroEspacoFisico(EspacoFisico ok) {
+		boolean cadastrou = espacos.add(ok);
         if(cadastrou){
             nEspacoFisico = espacos.size();
         }
         return nEspacoFisico;
 	}
 
-
-
-	public int cadastroEspacoFisico(EspacoFisico ok){
+	public int cadastroEspacoFisico1(EspacoFisico ok){
 	        boolean cadastrou = espacos.add(ok);
 			if(cadastrou){
 	            nEspacoFisico = espacos.size();

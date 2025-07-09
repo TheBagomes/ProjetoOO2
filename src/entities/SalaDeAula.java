@@ -2,9 +2,8 @@ package entities;
 
 import java.util.List;
 
-//import java.util.List;
-
 public class SalaDeAula extends EspacoFisico{
+	
 
 	public SalaDeAula(String sala, String tipo, String capacidade, String localizacao,  List<String> equipamentos) {
 		super(sala, tipo, capacidade, localizacao, equipamentos);
@@ -14,7 +13,7 @@ public class SalaDeAula extends EspacoFisico{
 	public String getTipo() {
 		return "Sala de Aula";
 	}
-
+	
 	public String toString(){
 		String resposta = super.toString();
 		resposta += '\n';
@@ -29,5 +28,3 @@ public class SalaDeAula extends EspacoFisico{
 		return null;
 	}
 }
-//    public String getIdentificador() {
-//        return identificador;	
