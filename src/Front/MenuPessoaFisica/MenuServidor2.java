@@ -2,7 +2,9 @@ package Front.MenuPessoaFisica;
 
 import javax.swing.JOptionPane;
 
+import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
 import Front.MenuTipos;
+import Front.MenuEspacoFisico.MenuEspacoFisico;
 import entities.Servidor;
 
 public class MenuServidor2{
@@ -95,7 +97,8 @@ public class MenuServidor2{
 					System.gc();
 				}
                 case 5:  // NOVO CASO - ABRE O MENU DE ESPAÇO FÍSICO
-                    MenuTipos.EscolherTipo();
+                	CadastroEspacoFisico cadEspacoFisico = new CadastroEspacoFisico(); // Ou injete a dependência
+                    MenuEspacoFisico.menuAgendamento(cadEspacoFisico); // Chama apenas o menu de agendamento
                     break;
 
 			    default:
