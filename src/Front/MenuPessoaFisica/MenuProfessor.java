@@ -105,7 +105,7 @@ public class MenuProfessor {
 					System.gc();
 				}
 
-                case 5:  // NOVO CASO - ABRE O MENU DE ESPAÇO FÍSICO
+                case 5: 
                 	 while (true) {
                          String opcao = JOptionPane.showInputDialog(
                              " Sistema de Agendamento de Salas\n\n" +

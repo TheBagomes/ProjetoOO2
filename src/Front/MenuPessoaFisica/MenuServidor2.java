@@ -58,7 +58,7 @@ public class MenuServidor2{
                     + "2 - Pesquisar Servidor\n"
                     + "3 - Atualizar Servidor\n"
                     + "4 - Remover Servidor\n"
-                    + "5 - Agendar Espaços Físicos\n"  // NOVA OPÇÃO
+                    + "5 - Agendar Espaços Físicos\n"  
                     + "0 - Voltar para menu anterior";
         
         int escolha = -1;

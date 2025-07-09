@@ -3,8 +3,6 @@ package Front;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
-import Front.MenuPessoaFisica.MenuAluno;
-
 public class MenuPadrao {
 	static ImageIcon icon = new ImageIcon(MenuPadrao.class.getResource("/resources/iconeMenus.png"));
 

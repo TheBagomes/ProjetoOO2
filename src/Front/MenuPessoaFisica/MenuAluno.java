@@ -55,7 +55,7 @@ public class MenuAluno {
             + "2 - Pesquisar aluno\n"
             + "3 - Atualizar aluno\n"
             + "4 - Remover aluno\n"
-            + "5 - Agendar Espaços Físicos\n"  // NOVA OPÇÃO
+            + "5 - Agendar Espaços Físicos\n"
             + "0 - Voltar para menu anterior";
 
         int escolha = -1;
@@ -103,7 +103,7 @@ public class MenuAluno {
 					System.gc();
 				}
 
-                case 5:  // Menu de Espaço Físico (restrito a agendamento)
+                case 5:
                 	 while (true) {
                          String opcao = JOptionPane.showInputDialog(
                              " Sistema de Agendamento de Salas\n\n" +

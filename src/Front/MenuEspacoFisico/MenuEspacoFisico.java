@@ -113,7 +113,7 @@ public class MenuEspacoFisico {
             	}
                     break;
 
-                case 4:  // NOVO CASO - AGENDAR SALA
+                case 4:  
                 	 while (true) {
                          String opcao = JOptionPane.showInputDialog(
                              "Menu Agendamento\n" +
