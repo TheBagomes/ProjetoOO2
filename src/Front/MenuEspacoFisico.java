@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
 import entities.EspacoFisico;
 
-public class MenuEspaçoFisico {
+public class MenuEspacoFisico {
 
 	 protected static String lerSala(){
          return JOptionPane.showInputDialog("Informe o nome da sala: ");
@@ -28,17 +28,22 @@ public class MenuEspaçoFisico {
          return JOptionPane.showInputDialog("Informe a localização da sala: ");
 
     }
+	 
 	 private static List<String> lerEquipamentos() {
-	        List<String> equipamentos = new ArrayList<>();
-	        String equipamento;
-	        do {
-	            equipamento = JOptionPane.showInputDialog("Informe um equipamento (ou deixe em branco para finalizar): ");
-	            if (equipamento != null && !equipamento.trim().isEmpty()) {
-	                equipamentos.add(equipamento.trim());
-	            }
-	        } while (equipamento != null && !equipamento.trim().isEmpty());
-	        return equipamentos;
-	    }
+		    List<String> equipamentos = new ArrayList<>();
+		    String input = JOptionPane.showInputDialog(
+		        "Informe os equipamentos SEPARADOS POR VÍRGULA:\n" +
+		        "Ex: Projetor, Ar condicionado, Quadro branco"
+		    );
+		    
+		    if (input != null && !input.trim().isEmpty()) {
+		        String[] itens = input.split(",");
+		        for (String item : itens) {
+		            equipamentos.add(item.trim());
+		        }
+		    }
+		    return equipamentos;
+		}
 		
 	 
 	 
@@ -48,7 +53,6 @@ public class MenuEspaçoFisico {
 	        String capacidade = lerCapacidade();
 	        String localizacao = lerLocalizacao();
 	        List<String> equipamentos = lerEquipamentos();
-	     
 	        return new EspacoFisico( sala, tipo,  capacidade, localizacao, equipamentos);
 	    }
 	    
@@ -64,39 +68,33 @@ public class MenuEspaçoFisico {
     int escolha = -1;
     do {
         String strEscolha = JOptionPane.showInputDialog(texto);
-        if (strEscolha == null) { // Se o usuário clicar em "Cancelar"
-            escolha = 0;
-            continue;
-        }
+        escolha = Integer.parseInt(strEscolha);
+        
+        switch (escolha) {
+        	case 1:
+	        	EspacoFisico novoEspacoFisico = dadosNovoEspacoFisico();
+	        	cadEspacoFisico.cadastroEspacoFisico((novoEspacoFisico));
+	        	break;
 
-        try {
-            escolha = Integer.parseInt(strEscolha);
-
-            switch (escolha) {
-                case 1:
-	                	EspacoFisico novoEspacoFisico = dadosNovoEspacoFisico();
-	                    cadEspacoFisico.cadastroEspacoFisico((novoEspacoFisico));
-	                    break;
-
-                case 2:
-                    String sala = lerSala();
-                    if (sala != null) {
-                        EspacoFisico encontrado = cadEspacoFisico.pesquisarEspacoFisico(sala);
-                        JOptionPane.showMessageDialog(null, 
-                            encontrado != null ? encontrado.toString() : "Sala não encontrada.");
+        	case 2:
+            	String sala = lerSala();
+            	if (sala != null) {
+            	EspacoFisico encontrado = cadEspacoFisico.pesquisarEspacoFisico(sala);
+            	JOptionPane.showMessageDialog(null, 
+                	encontrado != null ? encontrado.toString() : "Sala não encontrada.");
                     }
-                    break;
+                break;
 
-                case 3:
-                    sala = lerSala();
-                    if (sala != null) {
-                        EspacoFisico atualizado = dadosNovoEspacoFisico();
-                        if (atualizado != null) {
-                            boolean sucesso = cadEspacoFisico.atualizarEspacoFisico(sala, atualizado);
-                            JOptionPane.showMessageDialog(null, 
-                                sucesso ? "Sala atualizada!" : "Falha ao atualizar.");
-                        }
-                    }
+            case 3:
+            	sala = lerSala();
+            	if (sala != null) {
+                	EspacoFisico atualizado = dadosNovoEspacoFisico();
+                	if (atualizado != null) {
+                    	boolean sucesso = cadEspacoFisico.atualizarEspacoFisico(sala, atualizado);
+                    	JOptionPane.showMessageDialog(null, 
+                        	sucesso ? "Sala atualizada!" : "Falha ao atualizar.");
+                	}
+            	}
                     break;
 
                 case 4:  // NOVO CASO - AGENDAR SALA
@@ -127,10 +125,8 @@ public class MenuEspaçoFisico {
                 default:
                     JOptionPane.showMessageDialog(null, "Opção inválida!");
             }
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(null, "Digite um número válido!");
-        }
-    } while (escolha != 0);
+        
+    	} while (escolha != 0);
 	}
 		@Override
 		public String toString() {

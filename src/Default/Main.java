@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 
 import Front.MenuServidor2;
 import Front.MenuAluno;
-import Front.MenuEspaçoFisico;
+import Front.MenuEspacoFisico;
 import Front.MenuPadrao;
 import Front.MenuProfessor;
 
@@ -18,6 +18,7 @@ public class Main {
 		cadAluno = new Cadastros.CadastoPessoaFisica.CadastroAluno();
 		cadProfessor = new Cadastros.CadastoPessoaFisica.CadastroProfessor();
 		cadServidor = new Cadastros.CadastoPessoaFisica.CadastroServidores();
+		cadEspacoFisico = new Cadastros.CadastroEspacoFisico.CadastroEspacoFisico();
 		
 		int escolha = 0; 
 		
@@ -34,7 +35,7 @@ public class Main {
 					MenuServidor2.frontServidor(cadServidor);
 				break;
 				case 4: 
-					MenuEspaçoFisico.frontEspacoFisico(cadEspacoFisico);
+					MenuEspacoFisico.frontEspacoFisico(cadEspacoFisico);
 				break;
 				case 0: 
 				break;
