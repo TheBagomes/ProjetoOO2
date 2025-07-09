@@ -94,41 +94,41 @@ public class MenuAluno {
 				}
 
                 case 5:  // Menu de Espaço Físico (restrito a agendamento)
-                	while (true) {
-                        String opcao = JOptionPane.showInputDialog(
-                            "Sistema de Agendamento\n" +
-                            "1. Novo Agendamento\n" +
-                            "2 - Listar Agendamentos\n" +
-                            "0 - Sair\n" +
-                            "Digite sua opção:");
+                	 while (true) {
+                         String opcao = JOptionPane.showInputDialog(
+                             "Sistema de Agendamento\n" +
+                             "1 - Novo Agendamento\n" +
+                             "2 - Listar Agendamentos\n" +
+                             "0 - Sair\n" +
+                             "Digite sua opção:");
 
-                        if (opcao == null || opcao.equals("3")) break;
+                         if (opcao == null || opcao.equals("3")) break;
 
-                        switch (opcao) {
-                            case "1":
-                                String sala = JOptionPane.showInputDialog("Nome da Sala:");
-                                String data = JOptionPane.showInputDialog("Data (DD/MM/AAAA):");
-                                String horario = JOptionPane.showInputDialog("Horário (HH:MM):");
-                                String usuario = JOptionPane.showInputDialog("Matrícula/Nome :");
-                                
-                                boolean sucesso = CadastroAgendamento.adicionarAgendamento(sala, data, horario, usuario);
-                                if (sucesso) {
-                                    JOptionPane.showMessageDialog(null, "Agendamento realizado com sucesso!");
-                                }
-                                break;
-                                
-                            case "2":
-                                StringBuilder lista = new StringBuilder("--- Agendamentos ---\n");
-                                for (Agendamento ag : CadastroAgendamento.listarAgendamentos()) {
-                                    lista.append(ag.toString()).append("\n");
-                                }
-                                JOptionPane.showMessageDialog(null, lista.toString());
-                                break;
-                                
-                            default:
-                                JOptionPane.showMessageDialog(null, "Opção inválida!");
-                        }
-                    }
+                         switch (opcao) {
+                             case "1":
+                                 String sala = JOptionPane.showInputDialog("Nome da Sala:");
+                                 String data = JOptionPane.showInputDialog("Data (DD/MM/AAAA):");
+                                 String horario = JOptionPane.showInputDialog("Horário (HH:MM):");
+                                 String usuario = JOptionPane.showInputDialog("Matrícula/Nome do Responsável:");
+                                 
+                                 boolean sucesso = CadastroAgendamento.adicionarAgendamento(sala, data, horario, usuario);
+                                 if (sucesso) {
+                                     JOptionPane.showMessageDialog(null, "Agendamento realizado com sucesso!");
+                                 }
+                                 break;
+                                 
+                             case "2":
+                                 StringBuilder lista = new StringBuilder("--- Agendamentos ---\n");
+                                 for (Agendamento ag : CadastroAgendamento.listarAgendamentos()) {
+                                     lista.append(ag.toString()).append("\n");
+                                 }
+                                 JOptionPane.showMessageDialog(null, lista.toString());
+                                 break;
+                                 
+                             default:
+                                 JOptionPane.showMessageDialog(null, "Opção inválida!");
+                         }
+                     }
                     break;
 
 			    default:

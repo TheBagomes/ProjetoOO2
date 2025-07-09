@@ -1,10 +1,14 @@
 package Front.MenuEspacoFisico;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import javax.swing.JOptionPane;
+
+import Cadastros.CadastroEspacoFisico.CadastroAgendamento;
 import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
+import entities.Agendamento;
 import entities.EspacoFisico;
 
 public class MenuEspacoFisico {
@@ -98,16 +102,41 @@ public class MenuEspacoFisico {
                     break;
 
                 case 4:  // NOVO CASO - AGENDAR SALA
-                    sala = lerSala();
-                    if (sala != null) {
-                        String data = JOptionPane.showInputDialog("Informe a data do agendamento (DD/MM/AAAA):");
-                        String horario = JOptionPane.showInputDialog("Informe o horário (HH:MM):");
-                        
-                        // Aqui você pode chamar um método de agendamento no CadastroEspacoFisico
-                        boolean agendado = cadEspacoFisico.agendarEspacoFisico(sala, data, horario);
-                        JOptionPane.showMessageDialog(null, 
-                            agendado ? "Sala agendada com sucesso!" : "Falha ao agendar.");
-                    }
+                	 while (true) {
+                         String opcao = JOptionPane.showInputDialog(
+                             "Menu Agendamento\n" +
+                             "1 - Novo Agendamento\n" +
+                             "2 - Listar Agendamentos\n" +
+                             "0 - Sair\n" +
+                             "Digite sua opção:");
+
+                         if (opcao == null || opcao.equals("3")) break;
+
+                         switch (opcao) {
+                             case "1":
+                                 String sala1 = JOptionPane.showInputDialog("Nome da Sala:");
+                                 String data = JOptionPane.showInputDialog("Data (DD/MM/AAAA):");
+                                 String horario = JOptionPane.showInputDialog("Horário (HH:MM):");
+                                 String usuario = JOptionPane.showInputDialog("Matrícula/Nome do Responsável:");
+                                 
+                                 boolean sucesso = CadastroAgendamento.adicionarAgendamento(sala1, data, horario, usuario);
+                                 if (sucesso) {
+                                     JOptionPane.showMessageDialog(null, "Agendamento realizado com sucesso!");
+                                 }
+                                 break;
+                                 
+                             case "2":
+                                 StringBuilder lista = new StringBuilder("--- Agendamentos ---\n");
+                                 for (Agendamento ag : CadastroAgendamento.listarAgendamentos()) {
+                                     lista.append(ag.toString()).append("\n");
+                                 }
+                                 JOptionPane.showMessageDialog(null, lista.toString());
+                                 break;
+                                 
+                             default:
+                                 JOptionPane.showMessageDialog(null, "Opção inválida!");
+                         }
+                     }
                     break;
 
                 case 5:
@@ -153,7 +182,7 @@ public class MenuEspacoFisico {
                 case 1:
                     String sala = lerSala();
                     if (sala != null) {
-                        String data = JOptionPane.showInputDialog("Informe a data (DD/MM/AAAA):");
+                        String data = JOptionPane.showInputDialog("Informe a data (DD/MM/AA):");
                         String horario = JOptionPane.showInputDialog("Informe o horário (HH:MM):");
                         
                         boolean agendado = cadEspacoFisico.agendarEspacoFisico(sala, data, horario);
