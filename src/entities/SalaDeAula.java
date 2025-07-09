@@ -1,13 +1,14 @@
 package entities;
 
+import java.util.List;
+
 //import java.util.List;
 
 public class SalaDeAula extends EspacoFisico{
 
-	public SalaDeAula(String sala, String capacidade, String localizacao, String equipamentos, String equipamentos2) {
-		super(sala, "Sala de aula", capacidade, localizacao, equipamentos);
+	public SalaDeAula(String sala, String tipo, String capacidade, String localizacao,  List<String> equipamentos) {
+		super(sala, tipo, capacidade, localizacao, equipamentos);
 	}
-
 
 	@Override
 	public String getTipo() {
@@ -22,6 +23,10 @@ public class SalaDeAula extends EspacoFisico{
 		resposta += "Qual a Localizaçâo: " + localizacao + '\n';
 		resposta += "Quais são os equipamentos: " + equipamentos + '\n';
 		return resposta;
+	}
+
+	public String getIdentificador() {
+		return null;
 	}
 }
 //    public String getIdentificador() {

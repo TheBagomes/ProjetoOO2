@@ -1,5 +1,7 @@
 package entities;
 
+import java.util.List;
+
 public class Auditorio extends EspacoFisico {
 
     public Auditorio(
@@ -7,7 +9,7 @@ public class Auditorio extends EspacoFisico {
 		String tipo,
         String capacidade,
         String localizacao,
-        String equipamentos) {
+        List<String> equipamentos) {
         super(nome,tipo, capacidade, localizacao, equipamentos);
     }
 

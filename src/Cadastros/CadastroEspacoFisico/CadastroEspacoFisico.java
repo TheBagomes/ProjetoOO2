@@ -7,15 +7,12 @@ import entities.EspacoFisico;
 public class CadastroEspacoFisico {
 	int nEspacoFisico;
     private List<EspacoFisico> espacos;
-	private List<Equipamentos> equipamentosGeral;
+	//private List<Equipamentos> equipamentosGeral;
 
     public CadastroEspacoFisico() {
         espacos = new ArrayList<>();
-		equipamentosGeral = new ArrayList<>();
+		//equipamentosGeral = new ArrayList<>();
     }
-
-
-	// Esse e oque tinha antes 
 
 	public int cadastroEspacoFisico(EspacoFisico ok){
 	        boolean cadastrou = espacos.add(ok);
@@ -27,7 +24,7 @@ public class CadastroEspacoFisico {
 	    
 	public EspacoFisico pesquisarEspacoFisico(String matriculaEspacoFisico){
 	        for(EspacoFisico ok: espacos){
-	            if(ok.getNome().equalsIgnoreCase(matriculaEspacoFisico)){
+	            if(ok.getSala().equalsIgnoreCase(matriculaEspacoFisico)){
 	                return ok;
 	            }
 	        }
@@ -45,7 +42,6 @@ public class CadastroEspacoFisico {
 			return resposta;
 	}
 		
-	public boolean removerEspacoFisico(EspacoFisico ok) {
 		public boolean removerEspacoFisico(EspacoFisico remover) {
 
 			boolean removeu = false;
@@ -54,8 +50,8 @@ public class CadastroEspacoFisico {
 			}
 			return removeu;
 	}
-		}
-
+		
+		
         public boolean agendarEspacoFisico(String sala, String data, String horario) {
             // TODO Auto-generated method stub
             throw new UnsupportedOperationException("Unimplemented method 'agendarEspacoFisico'");

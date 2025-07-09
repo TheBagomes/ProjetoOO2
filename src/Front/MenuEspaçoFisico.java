@@ -9,7 +9,7 @@ import entities.EspacoFisico;
 
 public class MenuEspaçoFisico {
 
-	 private static String lerSala(){
+	 protected static String lerSala(){
          return JOptionPane.showInputDialog("Informe o nome da sala: ");
 
     }
@@ -57,8 +57,8 @@ public class MenuEspaçoFisico {
             + "1 - Cadastrar sala\n"
             + "2 - Pesquisar sala\n"
             + "3 - Atualizar sala\n"
-            + "4 - Agendar sala\n"      // NOVA OPÇÃO
-            + "5 - Remover sala\n"      // ANTIGO CASO 4 MOVIDO PARA AQUI
+            + "4 - Agendar sala\n"     
+            + "5 - Remover sala\n"      
             + "0 - Voltar";
 
     int escolha = -1;

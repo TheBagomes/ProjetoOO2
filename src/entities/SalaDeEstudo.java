@@ -1,10 +1,12 @@
 package entities;
 
+import java.util.List;
+
 //import java.util.List;
 
 public class SalaDeEstudo extends EspacoFisico{
 
-	public SalaDeEstudo(String sala, String tipo, String capacidade, String localizacao, String equipamentos) {
+	public SalaDeEstudo(String sala, String tipo, String capacidade, String localizacao,  List<String> equipamentos) {
 		super(sala, tipo,  capacidade, localizacao, equipamentos);
 	}
 

@@ -1,9 +1,10 @@
 package Cadastros.CadastroEspacoFisico;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
-import Cadastros.SalaDeEstudo;
+import entities.SalaDeEstudo;
 
 public class CadastroSalaDeEstudos {
 
@@ -12,7 +13,7 @@ public class CadastroSalaDeEstudos {
 
     public CadastroSalaDeEstudos() {
         nSalas = 0;
-        salas = new ArrayList<SalaDeEstudos>();
+        salas = new ArrayList<SalaDeEstudo>();
     }
 
     public int cadastrarSala(SalaDeEstudo pos) {
@@ -26,7 +27,7 @@ public class CadastroSalaDeEstudos {
     public SalaDeEstudo pesquisarSala(String nomeSala) {
         for (SalaDeEstudo pos : salas) {
             
-            if (pos.getNome().equalsIgnoreCase(nomeSala)) {
+            if (pos.getSala().equalsIgnoreCase(nomeSala)) {
                 return pos;
             }
         }

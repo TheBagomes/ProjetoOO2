@@ -1,5 +1,8 @@
 package Front;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.swing.JOptionPane;
 
 import Cadastros.CadastroEspacoFisico.CadastroSalaDeAula;
@@ -26,19 +29,24 @@ public class MenuSalaDeAula{
          return JOptionPane.showInputDialog("Informe a localização da sala: ");
 
     }
-	private static String lerEquipamentos(){
-        return JOptionPane.showInputDialog("Informe os equipamentos da sala: ");
-
+	private static List<String> lerEquipamentos(){
+		List<String> equipamentos = new ArrayList<>();
+        String equipamento;
+        do {
+            equipamento = JOptionPane.showInputDialog("Informe um equipamento (ou deixe em branco para finalizar): ");
+            if (equipamento != null && !equipamento.trim().isEmpty()) {
+                equipamentos.add(equipamento.trim());
+            }
+        } while (equipamento != null && !equipamento.trim().isEmpty());
+        return equipamentos;
     }
-		
 	 
-	 
-	public static SalaDeAula dadosNovoEspacoFisico(){
+	public static SalaDeAula dadosNovoSalaDeAula(){
 	        String sala = lerSala();
 	        String tipo = lerTipo();
 	        String capacidade = lerCapacidade();
 	        String localizacao = lerLocalizacao();
-	        String equipamentos = lerEquipamentos();
+	        List<String> equipamentos = lerEquipamentos();
 	     
 	        return new SalaDeAula( sala, tipo,  capacidade, localizacao, equipamentos);
 	    }
@@ -66,13 +74,13 @@ public class MenuSalaDeAula{
             switch (escolha) {
                 case 1:
 	                	SalaDeAula novoSalaDeAula = dadosNovoSalaDeAula();
-	                    cadSalaDeAula.CadastroSalaDeAula((novoSalaDeAula));
+	                    cadSalaDeAula.cadastrarSala((novoSalaDeAula));
 	                    break;
 
                 case 2:
                     String sala = lerSala();
                     if (sala != null) {
-                        SalaDeAula encontrado = cadSalaDeAula.pesquisarEspacoFisico(sala);
+                        SalaDeAula encontrado = cadSalaDeAula.pesquisarSala(sala);
                         JOptionPane.showMessageDialog(null, 
                             encontrado != null ? encontrado.toString() : "Sala não encontrada.");
                     }
@@ -81,9 +89,9 @@ public class MenuSalaDeAula{
                 case 3:
                     sala = lerSala();
                     if (sala != null) {
-                        SalaDeAula atualizado = dadosNovoEspacoFisico();
+                        SalaDeAula atualizado = dadosNovoSalaDeAula();
                         if (atualizado != null) {
-                            boolean sucesso = cadSalaDeAula.atualizarEspacoFisico(sala, atualizado);
+                            boolean sucesso = cadSalaDeAula.atualizarSala(sala, atualizado);
                             JOptionPane.showMessageDialog(null, 
                                 sucesso ? "Sala atualizada!" : "Falha ao atualizar.");
                         }
@@ -97,7 +105,7 @@ public class MenuSalaDeAula{
                         String horario = JOptionPane.showInputDialog("Informe o horário (HH:MM):");
                         
                         // Aqui você pode chamar um método de agendamento no CadastroEspacoFisico
-                        boolean agendado = cadSalaDeAula.agendarEspacoFisico(sala, data, horario);
+                        boolean agendado = cadSalaDeAula.agendarSala(sala, data, horario);
                         JOptionPane.showMessageDialog(null, 
                             agendado ? "Sala agendada com sucesso!" : "Falha ao agendar.");
                     }
@@ -105,8 +113,8 @@ public class MenuSalaDeAula{
 
                 case 5:
 	                    sala = lerSala();
-	                    SalaDeAula remover = cadSalaDeAula.pesquisarEspacoFisico(sala);
-					boolean removido = cadSalaDeAula.removerEspacoFisico(remover);
+	                    SalaDeAula remover = cadSalaDeAula.pesquisarSalaPorNome(sala);
+					boolean removido = cadSalaDeAula.removerSala(remover);
 					if (removido) {
 						JOptionPane.showMessageDialog(null, "Sala removida do cadastro");
 						System.gc();
@@ -156,7 +164,7 @@ public class MenuSalaDeAula{
                         String data = JOptionPane.showInputDialog("Informe a data (DD/MM/AAAA):");
                         String horario = JOptionPane.showInputDialog("Informe o horário (HH:MM):");
                         
-                        boolean agendado = cadEspacoFisico.agendarEspacoFisico(sala, data, horario);
+                        boolean agendado = cadSalaDeAula.agendarSala(sala, data, horario);
                         JOptionPane.showMessageDialog(null, 
                             agendado ? "Agendamento realizado!" : "Erro: sala não encontrada ou já reservada.");
                     }

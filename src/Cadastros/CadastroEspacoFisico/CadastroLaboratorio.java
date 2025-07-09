@@ -24,7 +24,7 @@ public class CadastroLaboratorio {
 
     public Laboratorio pesquisarLaboratorio(String identificador) {
         for (Laboratorio lab : laboratorios) {
-            if (lab.getNome().equalsIgnoreCase(identificador)) {
+            if (lab.getSala().equalsIgnoreCase(identificador)) {
                 return lab;
             }
         }

@@ -1,8 +1,8 @@
 package Front;
 
 import javax.swing.JOptionPane;
+
 import Cadastros.CadastroEspacoFisico.CadastroEspacoFisico;
-import entities.EspacoFisico;
 
 public class MenuTipos extends MenuEspaçoFisico {
     static Cadastros.CadastroEspacoFisico.CadastroEspacoFisico cadLaboratorio;

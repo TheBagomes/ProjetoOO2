@@ -6,11 +6,11 @@ import java.util.List;
 
 public class CadastroSalaDeAula {
     private List<SalaDeAula> salas;
-    private List<Equipamentos> equipamentos; // Lista compartilhada (ou pode ser por sala)
+   // private List<Equipamentos> Equipamentos; // Lista compartilhada (ou pode ser por sala) /*Vitor: Estão declarando mas não estão ultilizando*/
 
     public CadastroSalaDeAula() {
         salas = new ArrayList<>();
-        Equipamentos = new ArrayList<>(); // Inicializa a lista
+        //Equipamentos = new ArrayList<>(); // Inicializa a lista /*Vitor: Estão declarando mas não estão ultilizando*/
     }
 
     // Método para adicionar equipamento à sala
@@ -22,10 +22,7 @@ public class CadastroSalaDeAula {
         return false;
     }
     
-
-
-
-    private SalaDeAula pesquisarSala(String identificadorSala) {
+    public SalaDeAula pesquisarSala(String identificadorSala) {
     for (SalaDeAula sala : salas) {
         if (sala.getIdentificador().equalsIgnoreCase(identificadorSala)) {      
             return sala;
@@ -50,7 +47,7 @@ public class CadastroSalaDeAula {
 
     public SalaDeAula pesquisarSalaPorNome(String nomeSala) {
         for (SalaDeAula sala : salas) {
-            if (sala.getNome().equalsIgnoreCase(nomeSala)) {
+            if (sala.getSala().equalsIgnoreCase(nomeSala)) {
                 return sala;
             }
         }
@@ -66,5 +63,12 @@ public class CadastroSalaDeAula {
         }
         return false; // Retorna false se não conseguiu atualizar
     }
+
+	public boolean agendarSala(String sala, String data, String horario) {
+	
+		return false;
+	}
+
+
 }       
->>>>>>> 2d16a118a3d9f22161e882012a282f79ee715b17
+
